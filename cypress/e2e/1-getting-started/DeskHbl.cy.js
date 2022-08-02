@@ -9,7 +9,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   import Pdp from '../../support/Pdp.js'
   import Viewbag from '../../support/Viewbag.js'
   import GuestShippingAddress from '../../support/GuestShippingAddress.js'
-  import Cod from '../../support/Cod.js'
+  import Hbl from '../../support/Hbl.js'
   import { idText } from 'typescript';
   
   
@@ -21,11 +21,11 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   it('Ad',() =>
   {
   
-    cy.visit('/')
+    cy.visit('https://staging.sanasafinaz.com/uk')
   
     //////////////////////////Satge///////////////
     cy.url().then(($el) => {
-      if ($el=='https://staging.sanasafinaz.com/pk'||$el=='https://staging.sanasafinaz.com/us'||$el=='https://staging.sanasafinaz.com/us'
+      if ($el=='https://staging.sanasafinaz.com/pk'||$el=='https://staging.sanasafinaz.com/us'||$el=='https://staging.sanasafinaz.com/uk'
       ||$el=='https://staging.sanasafinaz.com/eu'||$el=='https://staging.sanasafinaz.com/gcc')  {
     
     const ad=new Ad()
@@ -59,12 +59,12 @@ Cypress.on('uncaught:exception', (err, runnable) => {
    g.country()
    g.region()
    g.city()
-   g.citydrop()
+   g.city1()
    g.postcode()
    g.phone()
    g.shipping()
   
-    const c=new Payfast()
+    const c=new Hbl()
     c.hbl()
     c.placeorder()
     }
@@ -92,6 +92,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   
   
   const g=new GuestShippingAddress()
+  cy.wait(5000)
    g.email()
    g.firstname()
    g.lastname()

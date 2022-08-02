@@ -3,7 +3,7 @@
 class GuestShippingAddress{
     email()
     {
-        cy.wait(18000)
+        cy.wait(23000)
 //click on email
 const e=cy.get('#customer-email')
 e.type('esha.intizar@rltsquare.com',{force: true })
@@ -85,6 +85,6 @@ return this
         return this
     
     }
-    
+ 
     }
     export default GuestShippingAddress

@@ -21,13 +21,13 @@ describe('Guest user', () => {
 it('Ad',() =>
 {
 
-  cy.visit('/')
+  cy.visit('https://staging.sanasafinaz.com/pk')
 
   //////////////////////////Satge///////////////
-cy.url().then(($el) => {
+// cy.url().then(($el) => {
   
-    if ($el=='https://staging.sanasafinaz.com/pk'||$el=='https://staging.sanasafinaz.com/us'||$el=='https://staging.sanasafinaz.com/us'
-    ||$el=='https://staging.sanasafinaz.com/eu'||$el=='https://staging.sanasafinaz.com/gcc')  {
+//     if ($el=='https://staging.sanasafinaz.com/pk'||$el=='https://staging.sanasafinaz.com/us'||$el=='https://staging.sanasafinaz.com/us'
+//     ||$el=='https://staging.sanasafinaz.com/eu'||$el=='https://staging.sanasafinaz.com/gcc')  {
   
   const ad=new Ad()
   ad.ad1()
@@ -68,46 +68,46 @@ cy.url().then(($el) => {
   const c=new Cod()
   c.cod()
   c.placeorder()
-  }
+//   }
 
-  else {
+//   else {
   
-  const s=new Search()
-  s.search()
+//   const s=new Search()
+//   s.search()
 
-  const f=new Filters()
-  // f.price()
-  f.size()
+//   const f=new Filters()
+//   // f.price()
+//   f.size()
 
-  const p=new Pdp()
-  p.pdp()
-  p.sizedrop()
-  p.quantity()
-  p.addtocart()
+//   const p=new Pdp()
+//   p.pdp()
+//   p.sizedrop()
+//   p.quantity()
+//   p.addtocart()
   
 
-  const v=new Viewbag()
-  v.viewbag1()
-  v.quantity()
-  v.clickcheckout()
+//   const v=new Viewbag()
+//   v.viewbag1()
+//   v.quantity()
+//   v.clickcheckout()
 
 
-const g=new GuestShippingAddress()
- g.email()
- g.firstname()
- g.lastname()
- g.address()
- g.country()
- g.region()
- g.city()
- g.city1()
- g.postcode()
- g.phone()
- g.shipping()
+// const g=new GuestShippingAddress()
+//  g.email()
+//  g.firstname()
+//  g.lastname()
+//  g.address()
+//  g.country()
+//  g.region()
+//  g.city()
+//  g.city1()
+//  g.postcode()
+//  g.phone()
+//  g.shipping()
 
   
-  }
-})
-})
+//    }
+// })
+ })
 })
 

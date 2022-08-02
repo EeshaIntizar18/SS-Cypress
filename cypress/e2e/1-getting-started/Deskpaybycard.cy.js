@@ -21,11 +21,11 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   it('Ad',() =>
   {
   
-    cy.visit('/')
+    cy.visit('https://staging.sanasafinaz.com/eu')
   
     //////////////////////////Satge///////////////
     cy.url().then(($el) => {
-     if ($el=='https://staging.sanasafinaz.com/pk'||$el=='https://staging.sanasafinaz.com/us'||$el=='https://staging.sanasafinaz.com/us'
+     if ($el=='https://staging.sanasafinaz.com/pk/'||$el=='https://staging.sanasafinaz.com/us'||$el=='https://staging.sanasafinaz.com/us'
     ||$el=='https://staging.sanasafinaz.com/eu'||$el=='https://staging.sanasafinaz.com/gcc')  {
     const ad=new Ad()
     ad.ad1()

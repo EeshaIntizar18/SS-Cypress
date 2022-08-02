@@ -1,3 +1,13 @@
+
+Cypress.Commands.add('iframe', { prevSubject: 'element' }, $iframe => {
+    return new Cypress.Promise(resolve => {
+        $iframe.ready(function() {
+          resolve($iframe.contents().find('body'));
+        });
+    });
+  });
+
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
