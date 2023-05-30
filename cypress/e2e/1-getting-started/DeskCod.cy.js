@@ -2,112 +2,68 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   return false;
 });
 
-
 import Ad from '../../support/Add'
 import Search from '../../support/Search.js'
 import Filters from '../../support/Filters.js'
 import Pdp from '../../support/Pdp.js'
 import Viewbag from '../../support/Viewbag.js'
 import GuestShippingAddress from '../../support/GuestShippingAddress.js'
-import Cod from '../../support/Cod.js'
-import { idText } from 'typescript';
-
+import SelectCountry from '../../support/SelectCountry';
 
 describe('Guest user', () => {
   beforeEach(() => {
+    Cypress.Cookies.preserveOnce('session_id', 'remember_token')
     cy.viewport(1440, 1220)
   })
 
-it('Ad',() =>
-{
+  it('Ad',() => {
+    cy.visit('https://staging.sanasafinaz.com/pk')
+    cy.url().then(($el) => {
+      if ($el=='https://staging.sanasafinaz.com/pk'||$el=='https://staging.sanasafinaz.com/us'||$el=='https://staging.sanasafinaz.com/uk'||$el=='https://staging.sanasafinaz.com/eu'||$el=='https://staging.sanasafinaz.com/gcc')  {
+        
+        const ad = new Ad()
+        ad.ad1()
 
-  cy.visit('https://staging.sanasafinaz.com/pk')
+        const country = new SelectCountry()
+        country.country()
 
-  //////////////////////////Satge///////////////
-// cy.url().then(($el) => {
-  
-//     if ($el=='https://staging.sanasafinaz.com/pk'||$el=='https://staging.sanasafinaz.com/us'||$el=='https://staging.sanasafinaz.com/us'
-//     ||$el=='https://staging.sanasafinaz.com/eu'||$el=='https://staging.sanasafinaz.com/gcc')  {
-  
-  const ad=new Ad()
-  ad.ad1()
+        const s = new Search()
+        s.search()
 
-  const s=new Search()
-  s.search()
+        const p = new Pdp()
+        p.pdp().selectSize().increaseQuantity().addToCart()
 
-  const f=new Filters()
-  // f.price()
-  f.size()
+        const v = new Viewbag()
+        v.viewbag1().clickcheckout()
 
-  const p=new Pdp()
-  p.pdp()
-  p.sizedrop()
-  p.quantity()
-  p.addtocart()
-  
+        const g = new GuestShippingAddress()
+        g.email().firstname().lastname().address().country().region().city().postcode().phone().shipping()
 
-  const v=new Viewbag()
-  v.viewbag1()
-  v.quantity()
-  v.clickcheckout()
+        cy.wait(2000);
+        cy.get('#cashondelivery').click({force:true})
+        cy.wait(1000)
+        cy.get('#checkout-payment-method-load > div > div > div.payment-method._active > div.payment-method-content > div.actions-toolbar > div > button').click({force:true})
+      
+      } else {
+        const ad = new Ad()
+        ad.ad1()
 
+        const country = new SelectCountry()
+        country.country()
 
-  const g=new GuestShippingAddress()
- g.email()
- g.firstname()
- g.lastname()
- g.address()
- g.country()
- g.region()
- g.city()
- g.city1()
- g.postcode()
- g.phone()
- g.shipping()
+        const s = new Search()
+        s.search()
 
-  const c=new Cod()
-  c.cod()
-  c.placeorder()
-//   }
+        const p = new Pdp()
+        p.pdp().sizedrop().quantity().addtocart()
 
-//   else {
-  
-//   const s=new Search()
-//   s.search()
+        const v = new Viewbag()
+        v.viewbag1().clickcheckout()
 
-//   const f=new Filters()
-//   // f.price()
-//   f.size()
-
-//   const p=new Pdp()
-//   p.pdp()
-//   p.sizedrop()
-//   p.quantity()
-//   p.addtocart()
-  
-
-//   const v=new Viewbag()
-//   v.viewbag1()
-//   v.quantity()
-//   v.clickcheckout()
-
-
-// const g=new GuestShippingAddress()
-//  g.email()
-//  g.firstname()
-//  g.lastname()
-//  g.address()
-//  g.country()
-//  g.region()
-//  g.city()
-//  g.city1()
-//  g.postcode()
-//  g.phone()
-//  g.shipping()
-
-  
-//    }
-// })
- })
+        const g = new GuestShippingAddress()
+        g.email().firstname().lastname().address().country().region().city().postcode().phone().shipping()
+       
+      }
+    })
+  })
 })
-

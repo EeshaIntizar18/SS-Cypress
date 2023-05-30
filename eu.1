@@ -1,0 +1,1222 @@
+ <!DOCTYPE html><html lang="en"><head><script> var BASE_URL = 'https\u003A\u002F\u002Fwww.sanasafinaz.com\u002Fpk\u002F'; var require = { 'baseUrl': 'https\u003A\u002F\u002Fwww.sanasafinaz.com\u002Fstatic\u002Fversion1662924565\u002Ffrontend\u002FRLTSquare\u002FSanaSafinaz\u002Fen_US' };</script> <meta charset="utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={xpid:"VQMEUVZaDhADU1lSDgcHXw==",licenseKey:"432bb4096e",applicationID:"37809609"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(t){try{s.console&&console.log(t)}catch(e){}}var i,o=t("ee"),a=t(27),s={};try{i=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,i.indexOf("dev")!==-1&&(s.dev=!0),i.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&o.on("internal-error",function(t){r(t.stack)}),s.dev&&o.on("fn-err",function(t,e,n){r(n.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,s){try{p?p-=1:i(s||new UncaughtException(t,e,n),!0)}catch(f){try{o("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function i(t,e){var n=e?null:c.now();o("err",[t,n])}var o=t("handle"),a=t(28),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError";if(!c.disabled){var p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(10),t(9),"addEventListener"in window&&t(6),c.xhrWrappable&&t(11),d=!0)}s.on("fn-start",function(t,e,n){d&&(p+=1)}),s.on("fn-err",function(t,e,n){d&&!n[l]&&(f(n,l,function(){return!0}),this.thrown=!0,i(n))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){o("ierr",[t,c.now(),!0])})}},{}],3:[function(t,e,n){var r=t("loader");r.disabled||(r.features.ins=!0)},{}],4:[function(t,e,n){function r(){var t=new PerformanceObserver(function(t,e){var n=t.getEntries();s(v,[n])});try{t.observe({entryTypes:["resource"]})}catch(e){}}function i(t){if(s(v,[window.performance.getEntriesByType(w)]),window.performance["c"+l])try{window.performance[h](m,i,!1)}catch(t){}else try{window.performance[h]("webkit"+m,i,!1)}catch(t){}}function o(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var a=t("ee"),s=t("handle"),c=t(10),f=t(9),u=t(5),d=t(19),l="learResourceTimings",p="addEventListener",h="removeEventListener",m="resourcetimingbufferfull",v="bstResource",w="resource",g="-start",y="-end",x="fn"+g,b="fn"+y,E="bstTimer",R="pushState",S=t("loader");if(!S.disabled){S.features.stn=!0,t(8),"addEventListener"in window&&t(6);var O=NREUM.o.EV;a.on(x,function(t,e){var n=t[0];n instanceof O&&(this.bstStart=S.now())}),a.on(b,function(t,e){var n=t[0];n instanceof O&&s("bst",[n,e,this.bstStart,S.now()])}),c.on(x,function(t,e,n){this.bstStart=S.now(),this.bstType=n}),c.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),this.bstType])}),f.on(x,function(){this.bstStart=S.now()}),f.on(b,function(t,e){s(E,[e,this.bstStart,S.now(),"requestAnimationFrame"])}),a.on(R+g,function(t){this.time=S.now(),this.startPath=location.pathname+location.hash}),a.on(R+y,function(t){s("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),u()?(s(v,[window.performance.getEntriesByType("resource")]),r()):p in window.performance&&(window.performance["c"+l]?window.performance[p](m,i,d(!1)):window.performance[p]("webkit"+m,i,d(!1))),document[p]("scroll",o,d(!1)),document[p]("keypress",o,d(!1)),document[p]("click",o,d(!1))}}},{}],5:[function(t,e,n){e.exports=function(){return"PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver}},{}],6:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&i(e)}function i(t){s.inPlace(t,[u,d],"-",o)}function o(t,e){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(i(window),i(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1];if(null!==n&&("function"==typeof n||"object"==typeof n)){var r=c(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?s(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],7:[function(t,e,n){function r(t,e,n){var r=t[e];"function"==typeof r&&(t[e]=function(){var t=o(arguments),e={};i.emit(n+"before-start",[t],e);var a;e[m]&&e[m].dt&&(a=e[m].dt);var s=r.apply(this,t);return i.emit(n+"start",[t,a],s),s.then(function(t){return i.emit(n+"end",[null,t],s),t},function(t){throw i.emit(n+"end",[t],s),t})})}var i=t("ee").get("fetch"),o=t(28),a=t(27);e.exports=i;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,e){r(d[h],e,f),r(l[h],e,f)}),r(s,"fetch",c),i.on(c+"end",function(t,e){var n=this;if(e){var r=e.headers.get("content-length");null!==r&&(n.rxSize=r),i.emit(c+"done",[null,e],n)}else i.emit(c+"done",[t],n)}))},{}],8:[function(t,e,n){var r=t("ee").get("history"),i=t("wrap-function")(r);e.exports=r;var o=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;o&&o.pushState&&o.replaceState&&(a=o),i.inPlace(a,["pushState","replaceState"],"-")},{}],9:[function(t,e,n){var r=t("ee").get("raf"),i=t("wrap-function")(r),o="equestAnimationFrame";e.exports=r,i.inPlace(window,["r"+o,"mozR"+o,"webkitR"+o,"msR"+o],"raf-"),r.on("raf-start",function(t){t[0]=i(t[0],"fn-")})},{}],10:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function i(t,e,n){this.method=n,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,n)}var o=t("ee").get("timer"),a=t("wrap-function")(o),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";e.exports=o,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),o.on(c+u,r),o.on(s+u,i)},{}],11:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",s)}function i(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function o(t){x.push(t),m&&(E?E.then(a):w?w(a):(R=-R,S.data=R))}function a(){for(var t=0;t<x.length;t++)r([],x[t]);x.length&&(x=[])}function s(t,e){return e}function c(t,e){for(var n in t)e[n]=t[n];return e}t(6);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=t(19),p=NREUM.o,h=p.XHR,m=p.MO,v=p.PR,w=p.SI,g="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],x=[];e.exports=u;var b=window.XMLHttpRequest=function(t){var e=new h(t);try{u.emit("new-xhr",[e],e),e.addEventListener(g,i,l(!1))}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(c(h,b),b.prototype=h.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,e){r(t,e),o(e)}),u.on("open-xhr-start",r),m){var E=v&&v.resolve();if(!w&&!v){var R=1,S=document.createTextNode(R);new m(a).observe(S,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===g||a()})},{}],12:[function(t,e,n){function r(t){if(!s(t))return null;var e=window.NREUM;if(!e.loader_config)return null;var n=(e.loader_config.accountID||"").toString()||null,r=(e.loader_config.agentID||"").toString()||null,f=(e.loader_config.trustKey||"").toString()||null;if(!n||!r)return null;var h=p.generateSpanId(),m=p.generateTraceId(),v=Date.now(),w={spanId:h,traceId:m,timestamp:v};return(t.sameOrigin||c(t)&&l())&&(w.traceContextParentHeader=i(h,m),w.traceContextStateHeader=o(h,v,n,r,f)),(t.sameOrigin&&!u()||!t.sameOrigin&&c(t)&&d())&&(w.newrelicHeader=a(h,m,v,n,r,f)),w}function i(t,e){return"00-"+e+"-"+t+"-01"}function o(t,e,n,r,i){var o=0,a="",s=1,c="",f="";return i+"@nr="+o+"-"+s+"-"+n+"-"+r+"-"+t+"-"+a+"-"+c+"-"+f+"-"+e}function a(t,e,n,r,i,o){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:i,id:t,tr:e,ti:n}};return o&&r!==o&&(s.d.tk=o),btoa(JSON.stringify(s))}function s(t){return f()&&c(t)}function c(t){var e=!1,n={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(n=NREUM.init.distributed_tracing),t.sameOrigin)e=!0;else if(n.allowed_origins instanceof Array)for(var r=0;r<n.allowed_origins.length;r++){var i=h(n.allowed_origins[r]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){e=!0;break}}return e}function f(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.enabled}function u(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.exclude_newrelic_header}function d(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&NREUM.init.distributed_tracing.cors_use_newrelic_header!==!1}function l(){return"init"in NREUM&&"distributed_tracing"in NREUM.init&&!!NREUM.init.distributed_tracing.cors_use_tracecontext_headers}var p=t(24),h=t(14);e.exports={generateTracePayload:r,shouldGenerateTrace:s}},{}],13:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);return e.protocol&&"data"===e.protocol?void g("Ajax/DataUrl/Excluded"):void(e.aborted||(n.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==e.status&&(e.status=0):o(this,t),n.cbTime=this.cbTime,s("xhr",[e,n,this.startTime,this.endTime,"xhr"],this)))}}function i(t,e){var n=c(e),r=t.params;r.hostname=n.hostname,r.port=n.port,r.protocol=n.protocol,r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.parsedOrigin=n,t.sameOrigin=n.sameOrigin}function o(t,e){t.params.status=e.status;var n=v(e,t.lastSize);if(n&&(t.metrics.rxSize=n),t.sameOrigin){var r=e.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable&&!a.disabled){var s=t("handle"),c=t(14),f=t(12).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(20),m=t(18),v=t(15),w=t(19),g=t(21).recordSupportability,y=NREUM.o.REQ,x=window.XMLHttpRequest;a.features.xhr=!0,t(11),t(7),u.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,e.loadCaptureCalled=!1,e.params=this.params||{},e.metrics=this.metrics||{},t.addEventListener("load",function(n){o(e,t)},w(!1)),h&&(h>34||h<10)||t.addEventListener("progress",function(t){e.lastSize=t.loaded},w(!1))}),u.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var n=f(this.parsedOrigin);if(n){var r=!1;n.newrelicHeader&&(e.setRequestHeader("newrelic",n.newrelicHeader),r=!0),n.traceContextParentHeader&&(e.setRequestHeader("traceparent",n.traceContextParentHeader),n.traceContextStateHeader&&e.setRequestHeader("tracestate",n.traceContextStateHeader),r=!0),r&&(this.dt=n)}}),u.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],i=this;if(n&&r){var o=m(r);o&&(n.txSize=o)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||i.loadCaptureCalled||(i.params.aborted=!0),("load"!==t.type||i.called===i.totalCbs&&(i.onloadCalled||"function"!=typeof e.onload))&&i.end(e)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}};for(var s=0;s<l;s++)e.addEventListener(d[s],this.listener,w(!1))}),u.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),u.on("xhr-load-added",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,e){var n=""+p(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),u.on("xhr-resolved",function(){this.endTime=a.now()}),u.on("addEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],e)}),u.on("removeEventListener-end",function(t,e){e instanceof x&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],e)}),u.on("fn-start",function(t,e,n){e instanceof x&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,e){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,e],e)}),u.on("fetch-before-start",function(t){function e(t,e){var n=!1;return e.newrelicHeader&&(t.set("newrelic",e.newrelicHeader),n=!0),e.traceContextParentHeader&&(t.set("traceparent",e.traceContextParentHeader),e.traceContextStateHeader&&t.set("tracestate",e.traceContextStateHeader),n=!0),n}var n,r=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url?n=t[0].url:window.URL&&t[0]&&t[0]instanceof URL&&(n=t[0].href),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var i=f(this.parsedOrigin);if(i&&(i.newrelicHeader||i.traceContextParentHeader))if("string"==typeof t[0]||window.URL&&t[0]&&t[0]instanceof URL){var o={};for(var a in r)o[a]=r[a];o.headers=new Headers(r.headers||{}),e(o.headers,i)&&(this.dt=i),t.length>1?t[1]=o:t.push(o)}else t[0]&&t[0].headers&&e(t[0].headers,i)&&(this.dt=i)}),u.on("fetch-start",function(t,e){this.params={},this.metrics={},this.startTime=a.now(),this.dt=e,t.length>=1&&(this.target=t[0]),t.length>=2&&(this.opts=t[1]);var n,r=this.opts||{},o=this.target;if("string"==typeof o?n=o:"object"==typeof o&&o instanceof y?n=o.url:window.URL&&"object"==typeof o&&o instanceof URL&&(n=o.href),i(this,n),"data"!==this.params.protocol){var s=(""+(o&&o instanceof y&&o.method||r.method||"GET")).toUpperCase();this.params.method=s,this.txSize=m(r.body)||0}}),u.on("fetch-done",function(t,e){if(this.endTime=a.now(),this.params||(this.params={}),"data"===this.params.protocol)return void g("Ajax/DataUrl/Excluded");this.params.status=e?e.status:0;var n;"string"==typeof this.rxSize&&this.rxSize.length>0&&(n=+this.rxSize);var r={txSize:this.txSize,rxSize:n,duration:a.now()-this.startTime};s("xhr",[this.params,r,this.startTime,this.endTime,"fetch"],this)})}},{}],14:[function(t,e,n){var r={};e.exports=function(t){if(t in r)return r[t];if(0===(t||"").indexOf("data:"))return{protocol:"data"};var e=document.createElement("a"),n=window.location,i={};e.href=t,i.port=e.port;var o=e.href.split("://");!i.port&&o[1]&&(i.port=o[1].split("/")[0].split("@").pop().split(":")[1]),i.port&&"0"!==i.port||(i.port="https"===o[0]?"443":"80"),i.hostname=e.hostname||n.hostname,i.pathname=e.pathname,i.protocol=o[0],"/"!==i.pathname.charAt(0)&&(i.pathname="/"+i.pathname);var a=!e.protocol||":"===e.protocol||e.protocol===n.protocol,s=e.hostname===document.domain&&e.port===n.port;return i.sameOrigin=a&&(!e.hostname||s),"/"===i.pathname&&(r[t]=i),i}},{}],15:[function(t,e,n){function r(t,e){var n=t.responseType;return"json"===n&&null!==e?e:"arraybuffer"===n||"blob"===n||"json"===n?i(t.response):"text"===n||""===n||void 0===n?i(t.responseText):void 0}var i=t(18);e.exports=r},{}],16:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return u.recordSupportability("API/"+e+"/called"),o(t+e,[f.now()].concat(s(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(27),s=t(28),c=t("ee").get("tracer"),f=t("loader"),u=t(21),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var l=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",h=p+"ixn-";a(l,function(t,e){d[e]=i(p,e,!0,"api")}),d.addPageAction=i(p,"addPageAction",!0),d.setCurrentRouteName=i(p,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(h+"tracer",[f.now(),t,n],r),function(){if(c.emit((i?"":"no-")+"fn-start",[f.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],n),t}finally{c.emit("fn-end",[f.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(h,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),u.recordSupportability("API/noticeError/called"),o("err",[t,f.now(),!1,e])}},{}],17:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],18:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],19:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],20:[function(t,e,n){var r=0,i=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);i&&(r=+i[1]),e.exports=r},{}],21:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[s,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",s="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:s},recordSupportability:r,recordCustom:i}},{}],22:[function(t,e,n){function r(){return s.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,s=t(29);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],23:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?p("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&p("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(f&&f<r.startTime)return;var i=[r],o=a({});o&&i.push(o),p("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||p("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function s(t){if(t instanceof w&&!y){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=h.now()?n.fid=h.now()-e:e>h.offset&&e<=Date.now()?(e-=h.offset,n.fid=h.now()-e):e=h.now(),y=!0,p("timing",["fi",e,n])}}function c(t){"hidden"===t&&(f=h.now(),p("pageHide",[f]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,d,l,p=t("handle"),h=t("loader"),m=t(26),v=t(19),w=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){u=new PerformanceObserver(r);try{u.observe({entryTypes:["paint"]})}catch(g){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(g){}l=new PerformanceObserver(o);try{l.observe({type:"layout-shift",buffered:!0})}catch(g){}}if("addEventListener"in document){var y=!1,x=["click","keydown","mousedown","pointerdown","touchstart"];x.forEach(function(t){document.addEventListener(t,s,v(!1))})}m(c)}},{}],24:[function(t,e,n){function r(){function t(){return e?15&e[n++]:16*Math.random()|0}var e=null,n=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(e=r.getRandomValues(new Uint8Array(31)));for(var i,o="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<o.length;s++)i=o[s],"x"===i?a+=t().toString(16):"y"===i?(i=3&t()|8,a+=i.toString(16)):a+=i;return a}function i(){return a(16)}function o(){return a(32)}function a(t){function e(){return n?15&n[r++]:16*Math.random()|0}var n=null,r=0,i=window.crypto||window.msCrypto;i&&i.getRandomValues&&Uint8Array&&(n=i.getRandomValues(new Uint8Array(t)));for(var o=[],a=0;a<t;a++)o.push(e().toString(16));return o.join("")}e.exports={generateUuid:r,generateSpanId:i,generateTraceId:o}},{}],25:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(i="Safari",o=c[1])}e.exports={agent:i,version:o,match:r}},{}],26:[function(t,e,n){function r(t){function e(){t(s&&document[s]?document[s]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(19);e.exports=r;var o,a,s;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",s="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",s="webkitVisibilityState")},{}],27:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],28:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],29:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?f(t,c,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!p.aborted||o){t&&a&&t(n,r,i);for(var s=e(i),c=m(n),f=c.length,u=0;u<f;u++)c[u].apply(s,r);var l=d[y[n]];return l&&l.push([x,n,r,s]),s}}function o(t,e){g[t]=m(t).concat(e)}function h(t,e){var n=g[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return g[t]||[]}function v(t){return l[t]=l[t]||i(n)}function w(t,e){p.aborted||u(t,function(t,n){e=e||"feature",y[n]=e,e in d||(d[e]=[])})}var g={},y={},x={on:o,addEventListener:o,removeEventListener:h,emit:n,get:v,listeners:m,context:e,buffer:w,abort:s,aborted:!1};return x}function o(t){return f(t,c,a)}function a(){return new r}function s(){(d.api||d.feature)&&(p.aborted=!0,d=p.backlog={})}var c="nr@context",f=t("gos"),u=t(27),d={},l={},p=e.exports=i();e.exports.getOrSetContext=o,p.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!O++){var t=S.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();c(E,function(e,n){t[e]||(t[e]=n)});var n=a();s("mark",["onload",n+S.offset],null,"api"),s("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=p+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){s("mark",["domContent",a()+S.offset],null,"api")}var a=t(22),s=t("handle"),c=t(27),f=t("ee"),u=t(25),d=t(17),l=t(19),p=d.getConfiguration("ssl")===!1?"http":"https",h=window,m=h.document,v="addEventListener",w="attachEvent",g=h.XMLHttpRequest,y=g&&g.prototype,x=!1;NREUM.o={ST:setTimeout,SI:h.setImmediate,CT:clearTimeout,XHR:g,REQ:h.Request,EV:h.Event,PR:h.Promise,MO:h.MutationObserver};var b=""+location,E={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},R=g&&y&&y[v]&&!/CriOS/.test(navigator.userAgent),S=e.exports={offset:a.getLastTimestamp(),now:a,origin:b,features:{},xhrWrappable:R,userAgent:u,disabled:x};if(!x){t(16),t(23),m[v]?(m[v]("DOMContentLoaded",o,l(!1)),h[v]("load",r,l(!1))):(m[w]("onreadystatechange",i),h[w]("onload",r)),s("mark",["firstbyte",a.getLastTimestamp()],null,"api");var O=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,c,f){function nrWrapper(){var o,a,u,l;try{a=this,o=d(arguments),u="function"==typeof r?r(o,a):r||{}}catch(p){i([p,"",[o,a,c],u],t)}s(n+"start",[o,a,c],u,f);try{return l=e.apply(a,o)}catch(h){throw s(n+"err",[o,a,h],u,f),h}finally{s(n+"end",[o,a,l],u,f)}}return a(e)?e:(n||(n=""),nrWrapper[l]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var s,c,f,u="-"===r.charAt(0);for(f=0;f<e.length;f++)c=e[f],s=t[c],a(s)||(t[c]=n(s,u?c+r:r,i,c,o))}function s(n,r,o,a){if(!h||e){var s=h;h=!0;try{t.emit(n,r,o,e,a)}catch(c){i([c,n,r,o],t)}h=s}}return t||(t=u),n.inPlace=r,n.flag=l,n}function i(t,e){e||(e=u);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)p.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[l])}function s(t,e){var n=e(t);return n[l]=t,o(t,n,u),n}function c(t,e,n){var r=t[e];t[e]=s(r,n)}function f(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var u=t("ee"),d=t(28),l="nr@original",p=Object.prototype.hasOwnProperty,h=!1;e.exports=r,e.exports.wrapFunction=s,e.exports.wrapInPlace=c,e.exports.argsToArray=f},{}]},{},["loader",2,13,4,3]);</script>
+<meta name="title" content="Sana Safinaz Online Store" />
+<meta name="description" content="Welcome to Sana Safinaz Online Store!" />
+<meta name="keywords" content="lawn collection, sanasafinaz" />
+<meta name="robots" content="INDEX,FOLLOW" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+<meta name="format-detection" content="telephone=no" />
+<title>Sana Safinaz Online Store</title>
+<link rel="stylesheet" type="text/css" media="all" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/css/styles-m.min.css" />
+<link rel="stylesheet" type="text/css" media="all" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/css/pages-styles/font-awesome.min.css" />
+<link rel="stylesheet" type="text/css" media="all" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/css/pages-styles/homePageStyle.min.css" />
+<link rel="stylesheet" type="text/css" media="all" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/css/pages-styles/bridalPageStyle.min.css" />
+<link rel="stylesheet" type="text/css" media="screen and (min-width: 768px)" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/css/styles-l.min.css" />
+<script> window.merged_js_url = 'https://www.sanasafinaz.com/static/version1662924565/_cache/merged/a41d197c2097d372527e37facf5ecf79.min.js';</script><link rel="preload" as="font" crossorigin="anonymous" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/fonts/opensans/light/opensans-300.woff2" />
+<link rel="preload" as="font" crossorigin="anonymous" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/fonts/opensans/regular/opensans-400.woff2" />
+<link rel="preload" as="font" crossorigin="anonymous" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/fonts/opensans/semibold/opensans-600.woff2" />
+<link rel="preload" as="font" crossorigin="anonymous" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/fonts/opensans/bold/opensans-700.woff2" />
+<link rel="preload" as="font" crossorigin="anonymous" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/fonts/Luma-Icons.woff2" />
+<link rel="preload" as="font" crossorigin="anonymous" href="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/fonts/fontawesome-webfont.woff2" />
+<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" />
+<link rel="icon" type="image/x-icon" href="https://www.sanasafinaz.com/media/favicon/stores/1/favicon.png" />
+<link rel="shortcut icon" type="image/x-icon" href="https://www.sanasafinaz.com/media/favicon/stores/1/favicon.png" />
+<meta name="google-site-verification" content="MKhJMuCc01LeLBRIwhjqZGyMAT9i4fD8Wap4KqDaeuw" />
+<!--e0b0ff9fd33f893e4cc9e6ca713296c8-->
+
+<style>
+.navigation .sections-menu>.level0 {
+    padding: 0 4px 0 !important;
+    margin-right: 4px !important;
+}
+@media screen and (max-width: 1170px) and (min-width: 768px){
+.checkout-index-index .checkout-agreement.field.choice {
+    padding-right: 150px;
+}    
+.checkout-index-index .checkout-payment-method .actions-toolbar .primary {position: relative;}
+}
+@media screen and (max-width: 979px) and (min-width: 768px){
+.checkout-index-index div.opc-wrapper {
+    width: 100%;
+    padding-right: 0;
+}
+}
+
+
+.swatch-option-link-layered .swatch-option.disabled {
+    display: none;
+}
+
+.product-info-main span.sprice-tag {
+ left: auto;
+}
+
+.linkdef { 
+margin-top: 10px;
+padding: 0 10px;
+}
+
+.customer-account-index .box-actions a.action.edit, 
+.customer-account-index .box-actions a.action.change-password, 
+.customer-address-index .box-actions a.action {
+    background: #e84134;
+    color: #fff;
+    box-sizing: border-box;
+    display: inline-block;
+    margin-top: 10px;
+    text-align: center;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.customer-address-index .block-addresses-list a.action {
+   background: #e84134;
+    color: #fff;
+    box-sizing: border-box;
+    display: inline-block;   
+    margin-top: 10px;
+    text-align: center;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.customer-account-index .box-actions a.action.edit:hover, .customer-account-index .box-actions a.action.change-password:hover {
+    background: #000;
+}
+
+.customer-account-index .box-actions a.action.edit:after {
+   content: none;
+}
+
+.customer-address-index .block-addresses-list a.action:after {
+    content: none !important;
+}
+
+ul.slides > li:not(:first-child) {
+    display: none;
+}
+
+@media screen and (min-width: 1025px) {
+.block-search .field.search, .tm_headerlinks_inner.active .tm_headerlinks {
+    top: 88px;
+   }
+}
+
+.home_categories_3col .category_main:hover .linkdef {
+background: #000;
+color: #fff !important;
+transition: .2s ease-in;
+}
+
+.sidebar .block-brand {
+    display: none;
+}
+.footer-bottom .links li:last-child {
+    display: none !important;
+}
+
+#verifiy-form {
+    padding: 30px 0;
+}
+#verifiy-form .fieldset {
+	margin: 0 0 20px;
+}
+@media screen and (min-width: 767px) {
+#verifiy-form .control {
+	max-width: 40%;
+}
+}
+
+</style>
+<style>
+#checkout-loader {
+    display: none;
+}
+
+
+.product-item-info .new-label {
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 14px;
+    z-index: 9;
+    padding: 0px;
+    top: 0px;
+    right: 0;
+    left: auto;
+    height: 45px;
+    width: 45px;
+    background: #000;
+    border-radius: 50%;
+    line-height: 42px;
+    font-weight: 600;
+}
+
+li.product.product-item span.sprice-tag {
+top: 10px; left: 0;}
+
+.trigger_popup_fricc {
+bottom: 60px;
+}
+
+/* custome  style start */
+
+@media only screen and (max-width: 1382px) and (min-width: 1342px){
+  .couture-main-slider .slider--even .left-block {
+    margin-left: 38px;
+}
+
+}
+
+#bridal-main-slider .owl-pagination {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+
+@media screen and (1024px) {
+.couture-main-slider .owl-pagination {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+}
+}
+
+body.couture-category-product-view.catalog-product-view .product.media .MagicToolboxContainer .MagicToolboxSelectorsContainer .mt-thumb-switcher.active-selector img {
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+}
+/* custome  style start */
+</style>
+
+<style>
+@media screen and (max-width: 767px){
+.cms-chinese-collection .slider-area .left-block h2,
+.cms-afghan-collection .slider-area .left-block h2,
+.cms-couture .slider-area .left-block h2,
+.cms-pastel-collection .slider-area .left-block h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.cms-chinese-collection .slider-area .left-block p,
+.cms-afghan-collection .slider-area .left-block p,
+.cms-couture .slider-area .left-block p,
+.cms-pastel-collection .slider-area .left-block p {
+    margin-bottom: 15px;
+}
+
+.cms-chinese-collection .slider-area .left-block,
+.cms-afghan-collection .slider-area .left-block,
+.cms-couture .slider-area .left-block,
+.cms-pastel-collection .slider-area .left-block {
+    order: 2 !important;
+    margin-top: 30px;
+}
+
+.cms-chinese-collection .slider-area.slider--even .row .left-block,
+.cms-afghan-collection .slider-area.slider--even .row .left-block,
+.cms-couture .slider-area.slider--even .row .left-block,
+.cms-pastel-collection .slider-area.slider--even .row .left-block,{
+    order: 2;
+}
+
+.cms-chinese-collection .slider-area,
+.cms-afghan-collection .slider-area,
+.cms-couture .slider-area,
+.cms-pastel-collection .slider-area {
+    padding-top: 0 !important;
+}
+
+.cms-chinese-collection .breadcumb_outer,
+.cms-afghan-collection .breadcumb_outer,
+.cms-couture .breadcumb_outer,
+.cms-pastel-collection .breadcumb_outer {
+    margin-bottom: 0;
+}
+body.couture-category-product-view.catalog-product-view .product.media .MagicToolboxContainer .MagicToolboxSelectorsContainer {
+    display: none !important;
+}
+}
+
+@media screen and (min-width: 768px){
+    .page-layout-1column div.product.media {
+    width: 60% !important;
+}
+
+.page-layout-1column div.product-info-main {
+    width: 40% !important;
+}
+body.couture-category-product-view.catalog-product-view .product.media .MagicToolboxContainer .MagicToolboxMainContainer a.MagicZoom {
+    width: 100% !important;
+}
+
+body.couture-category-product-view  #mtImageContainer figure.mz-figure {
+    width: 100%;
+}
+
+body.couture-category-product-view  #mtImageContainer figure.mz-figure img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+body.catalog-product-view  #mtImageContainer figure.mz-figure img {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+body.catalog-product-view  .mz-lens > img,
+.couture-category-product-view .mz-lens > img {
+    opacity: 0;
+}
+
+}
+</style>
+<style>
+@media screen and (max-width: 991px){
+    .slider-area .left-block h2 {
+    font-size: 26px;
+}
+}
+
+@media screen  and (max-width: 767px){
+body.couture-category-product-view img.no-sirv-lazy-load {
+    max-width: 100% !important;
+    max-height: 100% !important;
+}
+body.couture-category-product-view.catalog-product-view .product.media .MagicToolboxContainer .MagicToolboxMainContainer .mz-hint {
+    position: absolute;
+    top: 0;
+}
+}
+
+@media screen and (min-width: 768px){
+    .page-layout-1column div.product.media {
+    width: 55% !important;
+}
+
+.page-layout-1column div.product-info-main {
+    width: 45% !important;
+}
+}
+.couture-category-product-view button.action.rltsizechartpopup {
+    order: 6;
+    height: 20px;
+    line-height: 1;
+    background: transparent;
+    border: none;
+    color: #333;
+    display: inline-block !important;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: right;
+    border-bottom: 1px solid #000;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin-bottom: 10px;
+}
+
+body.couture-category-product-view.catalog-product-view .product-info-main .product.attribute.sku {margin: 15px 0 10px 0;}
+.catalog-product-view .swatch-attribute-options {
+    z-index: 0 !important;
+}
+.cms-bridal .page-header.fixed .fixed-header-style {
+    position: unset;
+}
+
+.category-accessories #layered-filter-block #narrow-by-list .filter-options-content .items li.item:first-child,
+.category-pants #layered-filter-block #narrow-by-list .filter-options-content .items li.item:first-child,
+.category-ready-to-wear  #layered-filter-block #narrow-by-list .filter-options-content .items li.item:first-child,
+.category-sale #layered-filter-block #narrow-by-list .filter-options-content .items li.item:first-child {
+    display: none;
+}
+
+.catalog-product-view .product-info-stock-sku .stock.unavailable{
+	font-size: 14px !important;
+    color: red !important;
+    display: inline-block !important;
+}
+
+.catalog-product-view .product-info-stock-sku .stock.unavailable span{
+    display: block !important;
+    background: #e51515 !important;
+    color: #fff !important;
+    padding: 2px 7px !important;
+    box-sizing: border-box !important;
+    margin-right: 10px !important;
+}
+
+.product-item-image .new-label{
+   display:none !important;
+}
+@media screen and (max-width: 767px){
+.catalog-product-view .product-info-main #product-options-wrapper {
+    z-index: 1;
+    position: relative;
+}
+
+
+}
+
+.catalog-product-view div.MagicToolboxSelectorsContainer img {
+    max-height: 100px;
+}
+.navigation .sections-menu>.level0:nth-last-of-type(1) ul.submenu.ui-menu.ui-widget.ui-widget-content.ui-corner-all,
+.navigation .sections-menu>.level0:nth-last-of-type(2) ul.submenu.ui-menu.ui-widget.ui-widget-content.ui-corner-all,
+.navigation .sections-menu>.level0:nth-last-of-type(3) ul.submenu.ui-menu.ui-widget.ui-widget-content.ui-corner-all,
+.navigation .sections-menu>.level0:nth-last-of-type(4) ul.submenu.ui-menu.ui-widget.ui-widget-content.ui-corner-all,
+.navigation .sections-menu>.level0:nth-last-of-type(5) ul.submenu.ui-menu.ui-widget.ui-widget-content.ui-corner-all {
+    left: auto !important;
+    right: 0 !important;
+}
+
+@media screen and (min-width: 767px){
+	.catalog-product-view .products-grid.products-related .slick-prev,
+	.catalog-product-view .products-grid.products-related .slick-next {
+	    z-index: 2 !important;
+	}
+
+.cms-index-index .home_categories_3col {margin-top: -31px;}
+.cms-index-index .home_categories_3col .category_main {margin-top: 0;}
+.cms-index-index .store_locator_home {padding-top: 0 !important;}
+}
+
+
+@media screen and (max-width: 767px) {
+.cms-index-index .home_categories_3col {margin-top: -31px !important; }
+.cms-index-index .home_categories_3col .category_main {margin-top: 0 !important;}
+}
+
+
+
+
+body.catalog-product-view .block.upsell {
+    width: 100% !important;
+                clear: both;
+                float: none;
+                overflow: :hidden;
+ display: inline-block !important;
+
+}
+
+
+body.catalog-product-view .block.upsell .slick-slide>div {
+    display: flex !important;
+}
+
+body.catalog-product-view  .block.upsell  #block-upsell-heading {
+    font-size: 26px;
+}
+
+body.catalog-product-view .block .products-grid .product-item-info:hover {
+    z-index: 2;
+}
+
+body.catalog-product-view .block  .product-item-details .price-box {
+    position: inherit;
+}
+
+body.catalog-product-view .block span.sale-discount-percentage {
+    right: 10px;
+    top: 10px;
+}
+
+
+@media screen and (min-width: 768px){
+body.catalog-product-view .block ol.slider:not(.slick-initialized)  span.product-image-wrapper {
+    padding-bottom: 151.163% !important;
+}
+}
+
+
+
+
+.checkout-cart-index tr.totals-tax-details.shown {
+    display: none !important;
+}
+.checkout-cart-index .cart-totals .totals-tax-summary .amount .price:after{
+     content: none !important;
+ }
+.checkout-cart-index .cart-totals .totals-tax-summary.expanded .amount .price:after{
+    content: none !important;
+ }
+
+ .checkout-index-index .opc-block-summary .table-totals .totals-tax-details.shown{
+    display: none !important;
+ }
+ .checkout-index-index .opc-block-summary .table-totals .totals-tax-summary .amount .price:after{
+    content: none !important;   
+ }
+
+ .checkout-index-index .opc-block-summary .table-totals .totals-tax-summary.expanded .amount .price:after{
+    content: none !important;
+ }
+
+
+ .checkout-index-index .opc-block-summary .table-totals .totals-tax-summary .amount .price {
+    padding-right: 0px;
+}
+
+.checkout-cart-index .cart-totals .totals-tax-summary .amount .price {
+    padding-right: 0px;
+}
+
+.checkout-cart-index tr.grand.totals.incl,
+.checkout-cart-index tr.grand.totals.excl,
+.checkout-index-index tr.grand.totals.incl,
+.checkout-index-index tr.grand.totals.excl,
+.checkout-index-index tr.totals-tax-summary {
+    display: none;
+}
+
+.checkout-cart-index .cart-summary .fieldset.estimate,
+.checkout-cart-index .cart-summary .fieldset.rate{
+    margin-bottom: 0 !important;
+}
+
+.checkout-index-index tr.totals-tax-summary {
+    display: none;
+}
+.checkout-cart-index tr.totals-tax-summary {
+    display: none;
+}
+
+</style>
+<meta name="facebook-domain-verification" content="1df8ywuj73wsits2sz6ivgmmnq8hqn" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-J1BEX67LW7"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-J1BEX67LW7');
+</script>   <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_PageCache/js/form-key-provider": {}
+            }
+        }</script>  <!-- GOOGLE TAG MANAGER --><script type="text/x-magento-init">
+            {
+                "*": {
+                    "Magento_GoogleTagManager/js/google-tag-manager": {
+                        "isCookieRestrictionModeEnabled": 0,
+                        "currentWebsite": 1,
+                        "cookieName": "user_allowed_save_cookie",
+                        "gtmAccountId": "GTM\u002DW4VJR4B",
+                        "storeCurrencyCode": "PKR",
+                        "ordersData": []                    }
+                }
+            }</script><!-- END GOOGLE TAG MANAGER -->   <!--Custom Style-->    <style> #social-login-popup .social-login-title { background-color: #6e716e } #social-login-popup .social-login #bnt-social-login-authentication, #social-login-popup .forgot .primary button, #social-login-popup .create .primary button, #social-login-popup .fake-email .primary button { background-color: #6e716e; border: #6e716e } .block.social-login-authentication-channel.account-social-login .block-content { text-align: center; }  /* Compatible ETheme_YOURstore*/ div#centerColumn .column.main .block.social-login-authentication-channel.account-social-login { max-width: 900px !important; margin: 0 auto !important; } div#centerColumn .column.main .block.social-login-authentication-channel.account-social-login .block-content { text-align: center; } @media (max-width: 1024px) { div#centerColumn .column.main .block.social-login-authentication-channel.account-social-login .block-content { padding: 0 15px; } }</style><!--<link rel="stylesheet" type="text/css" media="all" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"/>--> <!-- * @author: Salman Hanif * @email: salman.hanif@rltsquare.com --><script>
+
+    
+    var js_delay_load = 3000;
+    var main_js_loaded = false;
+    var loadMainJsEventId = '';
+
+    window.addEventListener("DOMContentLoaded", function(event){
+        loadMainJsEventId = setTimeout(function(){loadMainJs();},js_delay_load);
+    });
+
+    window.addEventListener("scroll", function(event){
+        js_delay_load=500;
+        loadMainJs();
+    });
+
+    window.addEventListener("mousemove", function(){
+        js_delay_load=500;
+        loadMainJs();
+    });
+
+    window.addEventListener("touchstart", function(){
+        js_delay_load=500;
+        loadMainJs();
+    });
+
+    function loadMainJs(){
+        if(main_js_loaded || window["merged_js_url"] == undefined){
+            return;
+        }
+        let scriptTag = document.createElement("script");
+        scriptTag["type"] = "text/javascript";
+        scriptTag["src"] = window["merged_js_url"];
+        scriptTag.addEventListener('load', function(){
+            delayLoadJs();
+        }, false);
+        document.getElementsByTagName("head")[0].appendChild(scriptTag);
+        main_js_loaded = true;
+
+        if(loadMainJsEventId != ''){
+            clearTimeout(loadMainJsEventId);
+        }
+    }
+
+    function delayLoadJs() {
+        var _scripts = document.getElementsByTagName("script"),
+            _doc = document,
+            _txt = "text/delayscript";
+
+        for (var i = 0, l = _scripts.length; i < l; i++) {
+            var _type = _scripts[i].getAttribute("type");
+            if (_type && _type.toLowerCase() == _txt)
+                _scripts[i].parentNode.replaceChild((function (sB) {
+                    var _s = _doc.createElement('script');
+                    _s.type = 'text/javascript';
+                    _s.innerHTML = sB.innerHTML;
+
+                    return _s;
+                })(_scripts[i]), _scripts[i]);
+        }
+    }</script></head><body data-container="body" data-mage-init='{"loaderAjax": {}, "loader": { "icon": "https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/images/loader-2.gif"}}' id="html-body" class="cms-home cms-index-index page-layout-1column"> <div id="email"></div><script type="text/x-magento-init">
+    {
+    "*":
+    {
+            "Bss_FacebookPixel/js/code": {
+                "id" : 187909588666912,
+                "action" : "cms_index_index",
+                "productData" : 404,
+                "categoryData" : 404,
+                "registration" : 404,
+                "addToWishList" : 404,
+                "initiateCheckout" : 404,
+                "search" : 404,
+                "orderData" : 404,
+                "pageView" : "pass"
+            }
+        }
+    }</script><!-- Facebook Pixel Code --><noscript><img height="1" width="1" style="display:none" alt="Facebook Pixel" src="https://www.facebook.com/tr?id=187909588666912&ev=PageView&noscript=1" /></noscript><!-- End Facebook Pixel Code --> <div data-role="bss-fbpixel-subscribe" style="display:none;"></div><span class="bss-subscribe-email" style="display:none;"></span> <span class="bss-subscribe-id" style="display:none;"></span> <script type="text/x-magento-init">
+    {
+        "[data-role='bss-fbpixel-subscribe']":
+            {
+                "Magento_Ui/js/core/app": {"components":{"bssFbpixelsSubscribe":{"component":"Bss_FacebookPixel\/js\/subscribe"}}}            }
+    }</script> <div data-role="bss-fbpixel-atc" style="display:none;"></div><script type="text/x-magento-init">
+    {
+        "[data-role='bss-fbpixel-atc']":
+            {
+                "Magento_Ui/js/core/app": {"components":{"bssFbpixelsAtc":{"component":"Bss_FacebookPixel\/js\/atc"}}}            }
+    }</script>             <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_PageBuilder/js/widget-initializer": {
+                "config": {"[data-content-type=\"slider\"][data-appearance=\"default\"]":{"Magento_PageBuilder\/js\/content-type\/slider\/appearance\/default\/widget":false},"[data-content-type=\"map\"]":{"Magento_PageBuilder\/js\/content-type\/map\/appearance\/default\/widget":false},"[data-content-type=\"row\"]":{"Magento_PageBuilder\/js\/content-type\/row\/appearance\/default\/widget":false},"[data-content-type=\"tabs\"]":{"Magento_PageBuilder\/js\/content-type\/tabs\/appearance\/default\/widget":false},"[data-content-type=\"slide\"]":{"Magento_PageBuilder\/js\/content-type\/slide\/appearance\/default\/widget":{"buttonSelector":".pagebuilder-slide-button","showOverlay":"hover","dataRole":"slide"}},"[data-content-type=\"banner\"]":{"Magento_PageBuilder\/js\/content-type\/banner\/appearance\/default\/widget":{"buttonSelector":".pagebuilder-banner-button","showOverlay":"hover","dataRole":"banner"}},"[data-content-type=\"buttons\"]":{"Magento_PageBuilder\/js\/content-type\/buttons\/appearance\/inline\/widget":false},"[data-content-type=\"products\"][data-appearance=\"carousel\"]":{"Magento_PageBuilder\/js\/content-type\/products\/appearance\/carousel\/widget":false},"[data-content-type=\"dotdigitalgroup_form\"]":{"Dotdigitalgroup_Enterprise\/js\/content-type\/dotdigitalgroup-form\/appearance\/default\/widget":false}},
+                "breakpoints": {"desktop":{"label":"Desktop","stage":true,"default":true,"class":"desktop-switcher","icon":"Magento_PageBuilder::css\/images\/switcher\/switcher-desktop.svg","conditions":{"min-width":"1024px"},"options":{"products":{"default":{"slidesToShow":"5"}}}},"tablet":{"conditions":{"max-width":"1024px","min-width":"768px"},"options":{"products":{"default":{"slidesToShow":"4"},"continuous":{"slidesToShow":"3"}}}},"mobile":{"label":"Mobile","stage":true,"class":"mobile-switcher","icon":"Magento_PageBuilder::css\/images\/switcher\/switcher-mobile.svg","media":"only screen and (max-width: 768px)","conditions":{"max-width":"768px","min-width":"640px"},"options":{"products":{"default":{"slidesToShow":"3"}}}},"mobile-small":{"conditions":{"max-width":"640px"},"options":{"products":{"default":{"slidesToShow":"2"},"continuous":{"slidesToShow":"1"}}}}}            }
+        }
+    }</script>  <div id="cookie-status">The store will not work correctly in the case when cookies are disabled.</div> <script type="text&#x2F;javascript">document.querySelector("#cookie-status").style.display = "none";</script> <script type="text/x-magento-init">
+    {
+        "*": {
+            "cookieStatus": {}
+        }
+    }</script> <script type="text/x-magento-init">
+    {
+        "*": {
+            "mage/cookies": {
+                "expires": null,
+                "path": "\u002F",
+                "domain": ".www.sanasafinaz.com",
+                "secure": false,
+                "lifetime": "18600"
+            }
+        }
+    }</script>    <script type="text/delayscript">    require.config({
+        map: {
+            '*': {
+                wysiwygAdapter: 'mage/adminhtml/wysiwyg/tiny_mce/tinymce4Adapter'
+            }
+        }
+    });</script>  <script> window.cookiesConfig = window.cookiesConfig || {}; window.cookiesConfig.secure = true; </script>  <script type="text/delayscript">
+    require.config({
+        paths: {
+            googleMaps: 'https\u003A\u002F\u002Fmaps.googleapis.com\u002Fmaps\u002Fapi\u002Fjs\u003Fv\u003D3\u0026key\u003D'
+        },
+        config: {
+            'Magento_PageBuilder/js/utils/map': {
+                style: ''
+            },
+            'Magento_PageBuilder/js/content-type/map/preview': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fwww.sanasafinaz.com\u002Fpk\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+            'Magento_PageBuilder/js/form/element/map': {
+                apiKey: '',
+                apiKeyErrorMessage: 'You\u0020must\u0020provide\u0020a\u0020valid\u0020\u003Ca\u0020href\u003D\u0027https\u003A\u002F\u002Fwww.sanasafinaz.com\u002Fpk\u002Fadminhtml\u002Fsystem_config\u002Fedit\u002Fsection\u002Fcms\u002F\u0023cms_pagebuilder\u0027\u0020target\u003D\u0027_blank\u0027\u003EGoogle\u0020Maps\u0020API\u0020key\u003C\u002Fa\u003E\u0020to\u0020use\u0020a\u0020map.'
+            },
+        }
+    });</script> <script type="text/delayscript">
+    require.config({
+        shim: {
+            'Magento_PageBuilder/js/utils/map': {
+                deps: ['googleMaps']
+            }
+        }
+    });</script> <!-- GOOGLE TAG MANAGER --><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W4VJR4B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><!-- END GOOGLE TAG MANAGER --> <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_GoogleTagManager/js/google-tag-manager-cart": {
+                "blockNames": ["category.products.list","product.info.upsell","catalog.product.related","checkout.cart.crosssell","search_result_list"],
+                "cookieAddToCart": "add_to_cart",
+                "cookieRemoveFromCart": "remove_from_cart"
+            }
+        }
+    }</script>  <div class="widget block block-static-block"><div class="marqi_mobile">
+  <div class="inner_mob">
+     <p>Due to urban flooding and the weather disruption throughout Pakistan our last mile deliveries are affected. We regret the inconvenience caused and thank you for your cooperation. Free Local & International Shipping (Above PKR 60000) - UAN: 021-111-003-005</p>
+  </div>
+</div>
+<style>
+.marqi_mobile {
+	padding: 3px 0px;
+	background-color: #F6F6F8;
+	overflow: hidden;
+}
+.marqi_mobile>.inner_mob {
+	border-style: none;
+	border-width: 1px;
+	border-radius: 0px;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	font-family: Montserrat, arial, tahoma;
+	font-size: 12px;
+}
+.marqi_mobile>.inner_mob>p {
+	color: #878787;
+}
+@media screen and (max-width: 767px) {
+.cms-index-index .home_categories_3col {margin-top: -31px !important; }
+.cms-index-index .home_categories_3col .category_main {margin-top: 0 !important;}
+.cms-index-index  .store_locator_home {
+    padding: 0px 0 0 0 !important;
+}
+}
+
+
+@media screen and (max-width: 767px) {
+	.marqi_mobile>.inner_mob {
+		position: relative;
+		width: 100%;
+		display: flex;
+		color: #878787;
+	}
+	.marqi_mobile>.inner_mob>p {
+		white-space: nowrap;
+		padding: 0 4rem;
+		margin-bottom: 0px;
+	}
+}
+</style>
+<script>
+if (window.matchMedia('(max-width: 767px)').matches)
+    {
+ function handleMarquee() {
+        const marquee = document.querySelectorAll('.marqi_mobile');
+        let speed = 0.6;
+        let lastScrollPos = 0;
+        let timer;
+        marquee.forEach(function(el) {
+          const container = el.querySelector('.marqi_mobile > .inner_mob ');
+          const content = el.querySelector('.marqi_mobile > .inner_mob > *');
+          //Get total width
+          const elWidth = content.offsetWidth;
+          //Duplicate content
+          let clone = content.cloneNode(true);
+          container.appendChild(clone);
+          let progress = 1;
+          function loop() {
+            progress = progress - speed;
+            if(progress <= elWidth * -1) {
+              progress = 0;
+            }
+            container.style.transform = 'translateX(' + progress + 'px)';
+            container.style.transform += 'skewX(' + speed * 0.4 + 'deg)';
+            window.requestAnimationFrame(loop);
+          }
+          loop();
+        });
+        window.addEventListener('scroll', function() {
+          const maxScrollValue = 12;
+          const newScrollPos = window.scrollY;
+          let scrollValue = newScrollPos - lastScrollPos;
+          if(scrollValue > maxScrollValue) scrollValue = maxScrollValue;
+          else if(scrollValue < -maxScrollValue) scrollValue = -maxScrollValue;
+          speed = scrollValue;
+          clearTimeout(timer);
+          timer = setTimeout(handleSpeedClear, 10);
+        });
+        function handleSpeedClear() {
+          speed = 0.6;
+        }
+      };
+      handleMarquee();
+    }
+</script></div><div class="page-wrapper"><header class="page-header"><div class="header content"><div class="tm_header"><div class="header-left"><div class="header-logo"><a href="https://www.sanasafinaz.com/pk/sales/guest/form/" class="shippings-truck"><img src="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/images/Shipped.svg" alt="Demo" /></a> <span data-action="toggle-nav" class="action nav-toggle"><span>Toggle Nav</span></span> <a class="logo" href="https://www.sanasafinaz.com/pk/" title="sanasafinaz" aria-label="store logo"><img src="https://www.sanasafinaz.com/media/logo/default/logo.png" title="sanasafinaz" alt="sanasafinaz" /></a></div></div><div class="header-right">  <div class="block block-search"><div class="block-search-inner"><div class="block block-title"><strong>Search</strong></div><div class="block block-content"><form class="form minisearch" id="search_mini_form" action="https://www.sanasafinaz.com/pk/catalogsearch/result/" method="get"><div class="search-open"></div><div class="field search"><label class="label" for="search" data-role="minisearch-label"><span>Search</span></label> <div class="control"><!--?php $blockObj= $block->getLayout()->createBlock('Megnor\CategoryList\Block\CategoryList')->setTemplate("CategoryList::storecategories.phtml")->toHtml(); echo $blockObj; ?--><input id="search" data-mage-init='{"quickSearch":{ "formSelector":"#search_mini_form", "url":"https://www.sanasafinaz.com/pk/search/ajax/suggest/", "destinationSelector":"#search_autocomplete"} }' type="text" name="q" value="" placeholder="Search Your Products..." class="input-text" maxlength="128" role="combobox" aria-haspopup="false" aria-autocomplete="both" autocomplete="off" aria-expanded="true" /><!-- <div id="search_autocomplete" class="search-autocomplete"></div> --><!--  --><div class="actions"><button type="submit" title="Search" class="action search"><span>Search</span></button></div></div></div></form></div></div></div><a href="https://www.sanasafinaz.com/pk/sales/guest/form/" class="shipping-truck"><img src="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/images/Shipped.svg" alt="Track Order" /></a><div class="tm_headerlinkmenu"><div class="tm_headerlinks_inner"><div class="headertoggle_img"> <div class="my-account-cms">Sign In <br />&amp; Join Free</div><div class="tm_headerlinks"><div class="panel header"> <a class="action skip contentarea" href="#contentarea"><span> Skip to Content</span></a><ul class="header links">  <li class="greet welcome" data-bind="scope: 'customer'"><!-- ko if: customer().fullname --><span class="logged-in" data-bind="text: new String('Welcome, %1!').replace('%1', customer().fullname)"></span> <!-- /ko --><!-- ko ifnot: customer().fullname --><span class="not-logged-in" data-bind='html:"Welcome to Sanasafinaz"'></span>  <!-- /ko --></li> <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                    "customer": {
+                        "component": "Magento_Customer/js/view/customer"
+                    }
+                }
+            }
+        }
+    }</script>  <li class="link authorization-link" data-label="or"><a href="https://www.sanasafinaz.com/pk/customer/account/login/referer/aHR0cHM6Ly93d3cuc2FuYXNhZmluYXouY29tL3BrLw%2C%2C/">Sign In</a></li><li><a href="https://www.sanasafinaz.com/pk/customer/account/create/" id="idGmpYrk3W">Create an Account</a></li></ul></div></div></div></div></div> <div data-block="minicart" class="minicart-wrapper"><a class="action showcart" href="https://www.sanasafinaz.com/pk/checkout/cart/" data-bind="scope: 'minicart_content'"><div class="cart-counter"><span class="counter qty empty" data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading"><span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --><span class="cart-items"> items -</span></span></span> <span data-bind="html: getCartParam('subtotal')" class="subtotal"></span></div><span class="cart_text">My Cart</span></a>  <script>
+        window.checkout = {"shoppingCartUrl":"https:\/\/www.sanasafinaz.com\/pk\/checkout\/cart\/","checkoutUrl":"https:\/\/www.sanasafinaz.com\/pk\/checkout\/","updateItemQtyUrl":"https:\/\/www.sanasafinaz.com\/pk\/checkout\/sidebar\/updateItemQty\/","removeItemUrl":"https:\/\/www.sanasafinaz.com\/pk\/checkout\/sidebar\/removeItem\/","imageTemplate":"Magento_Catalog\/product\/image_with_borders","baseUrl":"https:\/\/www.sanasafinaz.com\/pk\/","minicartMaxItemsVisible":5,"websiteId":"1","maxItemsToDisplay":10,"storeId":"1","storeGroupId":"1","customerLoginUrl":"https:\/\/www.sanasafinaz.com\/pk\/customer\/account\/login\/referer\/aHR0cHM6Ly93d3cuc2FuYXNhZmluYXouY29tL3BrLw%2C%2C\/","isRedirectRequired":false,"autocomplete":"off","captcha":{"user_login":{"isCaseSensitive":true,"imageHeight":50,"imageSrc":"","refreshUrl":"https:\/\/www.sanasafinaz.com\/pk\/captcha\/refresh\/","isRequired":false,"timestamp":1663143569}}};</script><script type="text/x-magento-init">
+    {
+        "[data-block='minicart']": {
+            "Magento_Ui/js/core/app": {"components":{"minicart_content":{"children":{"subtotal.container":{"children":{"subtotal":{"children":{"subtotal.totals":{"config":{"display_cart_subtotal_incl_tax":1,"display_cart_subtotal_excl_tax":0,"template":"Magento_Tax\/checkout\/minicart\/subtotal\/totals"},"component":"Magento_Tax\/js\/view\/checkout\/minicart\/subtotal\/totals","children":{"subtotal.totals.msrp":{"component":"Magento_Msrp\/js\/view\/checkout\/minicart\/subtotal\/totals","config":{"displayArea":"minicart-subtotal-hidden","template":"Magento_Msrp\/checkout\/minicart\/subtotal\/totals"}}}}},"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/subtotal"}}},"component":"uiComponent","config":{"displayArea":"subtotalContainer"}},"item.renderer":{"component":"Magento_Checkout\/js\/view\/cart-item-renderer","config":{"displayArea":"defaultRenderer","template":"Magento_Checkout\/minicart\/item\/default"},"children":{"item.image":{"component":"Magento_Catalog\/js\/view\/image","config":{"template":"Magento_Catalog\/product\/image","displayArea":"itemImage"}},"checkout.cart.item.price.sidebar":{"component":"uiComponent","config":{"template":"Magento_Checkout\/minicart\/item\/price","displayArea":"priceSidebar"}}}},"extra_info":{"component":"uiComponent","config":{"displayArea":"extraInfo"}},"promotion":{"component":"uiComponent","config":{"displayArea":"promotion"}}},"config":{"itemRenderer":{"default":"defaultRenderer","simple":"defaultRenderer","virtual":"defaultRenderer"},"template":"Magento_Checkout\/minicart\/content"},"component":"Magento_Checkout\/js\/view\/minicart"}},"types":[]} },
+        "*": {
+            "Magento_Ui/js/block-loader": "https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/images/loader-1.gif"
+        }
+    }</script></div></div><div class="header-center"><div class="nav-holder">      <div class="sections nav-sections"><div class="section-items nav-sections-items" role="tablist"><div class="section-item-content nav-sections-item-content" id="store.menu"><nav class="navigation" data-action="navigation"><ul class="sections-menu" data-mage-init='{"menu":{"responsive":true, "expanded":true}}'><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/sale.html"  class="level-top" ><span>Sale</span></a><ul class="submenu"><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/sale/ready-to-wear.html" ><span>Ready To Wear</span></a><div class="bottomstatic" ></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/sale/unstitched-fabric.html" ><span>Unstitched Fabric</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Muzlin-Navigation-19-NEW.webp" width="888" height="946" /></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/sale/accessories.html" ><span>Accessories</span></a><div class="bottomstatic" ><p></p>
+<p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/33-compressor.webp" alt="" /></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/catalog/category/view/s/kids/id/718/" ><span>Kids</span></a><div class="bottomstatic" ></div></li><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/14th-2022-Navigation-.jpg" alt=""></p></div></ul></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/new-arrivals.html"  class="level-top" ><span>New Arrivals</span></a></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric.html"  class="level-top" ><span>Unstitched Fabric</span></a><ul class="submenu"><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/nura-22-vol-2.html" ><span>Nura Festive Collection&#039;22 - Vol II</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/G222-Navigation-Banner_2.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/eid-collection.html" ><span>Eid Unstitched Collection</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/E221-Navigation-Banner_2.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/muzlin-summer-22-vol-3.html" ><span>Muzlin Summer&#039;22 Vol 3</span></a><div class="bottomstatic" ><img src="https://www.sanasafinaz.com/media/wysiwyg/M223-Navigation-Banner.jpg" alt="" /></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/mahay-summer-22.html" ><span>Mahay Summer&#039;22</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/h221-Navigation-Banner.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/nura-festive-collection-22.html" ><span>Nura Festive Collection&#039;22</span></a><div class="bottomstatic" ><img src="https://www.sanasafinaz.com/media/wysiwyg/G221-Navigation-Banner_3.jpg" alt="" /></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/muzlin-summer-vol-2.html" ><span>Muzlin Summer Vol-2</span></a><div class="bottomstatic" ></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/luxury-lawn-22.html" ><span>Luxury Lawn&#039;22</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/L221-Navigation-Banner.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/muzlin-spring-vol-1.html" ><span>Muzlin Spring Vol 1</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/M221-Navigation-Banner.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/mahay-winter-21.html" ><span>Mahay Winter&#039;21</span></a><div class="bottomstatic" ><img src="https://www.sanasafinaz.com/media/wysiwyg/H212-NAvigation_Banner.jpg" alt="" /></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/festive-collection-21-vol-iii.html" ><span>Nura Festive Collection&#039;21 - Vol III</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/G213-Navigation-Banner.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/luxury-winter-shawl-velvet-21.html" ><span>Luxury Winter Shawl/Velvet&#039;21</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/Wnter-shawl-21-Navigation-Banner.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/muzlin-winter-21.html" ><span>Muzlin Winter&#039;21</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/M214-Navigation-Banner_1.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/woven-collection-21.html" ><span>Woven Collection&#039;21</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/Woven-21-Navigation-Banner.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/unstitched-fabric/kurnool-21.html" ><span>Kurnool&#039;21</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/Kurnool-21-Navigation-Banner.jpg" alt=""></p></div></li><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/G222-Navigation-Banner_2.jpg" alt=""></p></div></ul></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/ready-to-wear.html"  class="level-top" ><span>Ready To Wear</span></a><ul class="submenu"><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/ready-to-wear/mahay.html" ><span>Mahay</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/h221-Navigation-Banner.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/ready-to-wear/basics.html" ><span>Basics</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/RTW-Basic-Nvg-banner.webp" width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/ready-to-wear/embroidered-essentials.html" ><span>Embroidered Essentials</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Emb-Eassential-Nvg-Banner.webp" width="888" height="947"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/ready-to-wear/signature.html" ><span>Signature</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Signature-nvg-banner.webp" width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/ready-to-wear/exclusive.html" ><span>Exclusive</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Exclusive-nvg-banner.webp" width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/ready-to-wear/silk-tunics.html" ><span>Silk Tunics</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Silk-tunic-nvg-Banner.webp" width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/ready-to-wear/black-gold.html" ><span>Black &amp; Gold</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Black-_-gold-nvg-Banner.webp" width="888" height="947"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/ready-to-wear/capsule.html" ><span>Capsule</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/capsule-nvg-banner.webp" width="888" height="946"></p></div></li><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/EID-RTW-Navigation.jpg" alt=""></p></div></ul></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/kids.html"  class="level-top" ><span>Kids</span></a><ul class="submenu"><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/kids/basics.html" ><span>Basics</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Basic-Nvg-Banner.webp" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/kids/essential.html" ><span>Essential</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Essentrials-Nvg-Banner.webp" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/kids/signature.html" ><span>Signature</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Kid-RTW-Signature-Nvg.webp" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/kids/western-wear.html" ><span>Western Wear</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Western-Nvg-Banner.webp" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/kids/pants.html" ><span>Pants</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Pants-Nvg-Banner.webp" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/kids/exclusive.html" ><span>Exclusive</span></a><div class="bottomstatic" ></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/kids/dupatta.html" ><span>Dupatta</span></a><div class="bottomstatic" ></div></li><div class="bottomstatic" ><img src="https://www.sanasafinaz.com/media/wysiwyg/Kids-RTW-20220-March-Navigation-Banner.jpg" alt="" /></div></ul></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/pants.html"  class="level-top" ><span>Bottoms</span></a><ul class="submenu"><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/pants/shalwar.html" ><span>Shalwar</span></a><div class="bottomstatic" ></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/pants/trousers.html" ><span>Trousers</span></a><div class="bottomstatic" ></div></li><div class="bottomstatic" ></div></ul></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/footwear.html"  class="level-top" ><span>Shoes</span></a></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/accessories.html"  class="level-top" ><span>Accessories</span></a><ul class="submenu"><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/accessories/dupatta.html" ><span>Dupatta</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Dupattas-Nvg-Banner.webp" width="888" height="946"></p></div></li><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Dupattas-Nvg-Banner.webp" width="888" height="946"></p></div></ul></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/e-catalog.html"  class="level-top" ><span>Catalogue</span></a><ul class="submenu"><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/e-catalog/muzlin-summer-22-vol-3-e-catalog.html" ><span>Muzlin Summer&#039;22 Vol-3</span></a><div class="bottomstatic" ><img src="https://www.sanasafinaz.com/media/wysiwyg/M223-Navigation-Banner.jpg" alt="" /></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/e-catalog/mahay-summer-22.html" ><span>Mahay Summer&#039;22</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/h221-Navigation-Banner.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/e-catalog/muzlin-summer-22-vol-2.html" ><span>Muzlin Summer&#039;22 Vol 2</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/m222-Navigation-Banner_2.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/e-catalog/luxury-lawn-22-e-catalog.html" ><span>Luxury Lawn&#039;22</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/L221-Navigation-Banner.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/e-catalog/muzlin-spring-vol-1-e-catalog.html" ><span>Muzlin Spring Vol I</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/M221-Navigation-Banner.jpg" alt=""></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/e-catalog/woven-collection-21-e-catalog.html" ><span>Woven Collection&#039;21</span></a><div class="bottomstatic" ><p><img src="https://www.sanasafinaz.com/media/wysiwyg/Woven-21-Navigation-Banner.jpg" alt=""></p></div></li><div class="bottomstatic" ><img src="https://www.sanasafinaz.com/media/wysiwyg/M223-Navigation-Banner.jpg" alt="" /></div></ul></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/bridal.html"  class="level-top" ><span>Bridal</span></a></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture.html"  class="level-top" ><span>Couture</span></a><ul class="submenu"><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture/afghan-collection.html" ><span>Afghan Collection</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Afghan-Nvg-Banner.webp" width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture/chinese-collection.html" ><span>Chinese Collection</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Chinese-Nvg-Banner.webp" width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture/pastel-collection.html" ><span>Pastel Collection</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Pastal-Nvg-Banner.webp" alt="" width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture/diffusion-collection.html" ><span>Diffusion Collection </span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/Fade-Blue-optimized.webp" alt="" width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture/raya-collection.html" ><span>Raya Collection</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/raya.jpg" width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/0" ><span>Melange Collection</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/couture/malenga.jpg" width="888" height="946"></p>
+</div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture/mangata-collection.html" ><span>Mangata Collection</span></a><div class="bottomstatic" ><img src="https://www.sanasafinaz.com/media/wysiwyg/couture/Mangata-collection.jpg" alt="Mangata-collection" width="888" height="946" /></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture/keya-collection.html" ><span>Keya Collection</span></a><div class="bottomstatic" ><img src="https://www.sanasafinaz.com/media/wysiwyg/couture/Keya-collection.jpg" alt="Keya-Collection" width="888" height="946" /></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture/kaira-collection.html" ><span>Kaira Collection</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/01.png" width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture/anaya-collection.html" ><span>Anaya Collection</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/02.png"width="888" height="946"></p></div></li><li class="level0 level-top"><a href="https://www.sanasafinaz.com/pk/couture/jolie-collection.html" ><span>Jolie Collection</span></a><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/03_1_.png"  width="888" height="946"></p></div></li><div class="bottomstatic" ><p><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/couture-nvg-banner_1.jpg" alt=""></p></div></ul></li> </ul></nav></div></div></div></div></div></div></div></header>  <div class="sections nav-sections"> <div class="section-items nav-sections-items" data-mage-init='{"tabs":{"openedState":"active"}}'>  <div class="section-item-title nav-sections-item-title" data-role="collapsible"><a class="nav-sections-item-switch" data-toggle="switch" href="#store.links">Account</a></div><div class="section-item-content nav-sections-item-content" id="store.links" data-role="content"><!-- Account links --></div> </div></div><div class="breadcumb_outer"><div class="breadcumb_inner container-width"> </div></div><style>
+  .cms-index-index .breadcumb_outer {
+        display: none !important;
+    }
+
+@media screen and (max-width: 767px) {
+    .cms-index-index .mainSlider .slider-main .slides > li {
+        margin-bottom: 0;
+    }
+
+    .cms-index-index .mainSlider + p {
+        margin: 0;
+    }
+    .cms-index-index .breadcumb_outer {
+        display: none !important;
+    }
+    .cms-index-index .home_categories_3col .category_main .cat_image img {
+        width: 100% !important;
+        height: auto !important;
+    }
+    .cms-index-index .page-main {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    .cms-index-index .home_categories_3col .category_main {
+        margin-bottom: 0;
+    margin-top: 10px;
+    }
+    .cms-index-index .home_categories_3col {
+        padding: 0;
+    }
+    .cms-index-index .home_categories_3col .category_main .cat_image img {
+        width: 100%;
+        height: auto;
+    }
+    .cms-index-index .cat_desc,
+    .cms-index-index .cat_desc p,
+    .cms-index-index .cat_desc h3,
+    .cms-index-index .linkdef {
+        display: none;
+    }
+.cms-index-index .store_locator_home {
+    padding: 0 0 0 0;
+    margin: 0;
+}  
+    .cms-index-index .tm_instagram_cms .container-width {
+        padding: 60px 15px 92px;
+    }    
+.cms-index-index .mainSlider .owl-dots {
+        display: none !important;
+    }
+}
+</style>
+<div class="mainSlider">
+<div class="mainSlider-bkg">
+<div class="mainSlider-inner">
+<div class="slider-main">
+<ul class="slides">
+<li>
+    <a href="footwear.html"> <picture> <source srcset="https://www.sanasafinaz.com/media/wysiwyg/Footwear-22-September-Main-Banner-Mobile-.jpg" media="(max-width: 767px)" /> <img src="https://www.sanasafinaz.com/media/wysiwyg/Footwear-22-September-Main-Banner.jpg" alt="Footwear" /> </picture> </a>
+</li>
+
+<li>
+    <a href="ready-to-wear.html"> <picture> <source srcset="https://www.sanasafinaz.com/media/wysiwyg/EID-RTW-Mobile-Main-Banner.jpg" media="(max-width: 767px)" /> <img src="https://www.sanasafinaz.com/media/wysiwyg/EID-RTW-MAIN-BANNER.jpg" alt="Ready To Wear" /> </picture> </a>
+</li>
+
+<li>
+    <a href="unstitched-fabric/nura-22-vol-2.html"> <picture> <source srcset="https://www.sanasafinaz.com/media/wysiwyg/G222-Main-Banner-For-Mobile.jpg" media="(max-width: 767px)" /> <img src="https://www.sanasafinaz.com/media/wysiwyg/G222-Main-Banner_1.jpg" alt="Nura Vol 2" /> </picture> </a>
+</li>
+
+<li>
+    <a href="kids.html"> <picture> <source srcset="https://www.sanasafinaz.com/media/wysiwyg/Kids-RTW-20220-March-Main-Banner-For-Mobile.jpg" media="(max-width: 767px)" /> <img src="https://www.sanasafinaz.com/media/wysiwyg/Kids-RTW-20220-March-Main-Banner.jpg" alt="Kids Summer" /> </picture> </a>
+</li>
+
+<!--- <li><a href="fragrances.html">
+<picture>
+  <source media="(max-width: 767px)" srcset="https://www.sanasafinaz.com/media/wysiwyg/Mahay-Winter-Main-Banner_1.jpg">
+  <img src="https://www.sanasafinaz.com/media/wysiwyg/Main-Banner_for-women-2.jpg" alt="Mahay Winter">
+</picture>
+</a></li> 
+<li><a href="unstitched-fabric/muzlin-winter-20.html">
+<picture>
+  <source media="(max-width: 767px)" srcset="https://www.sanasafinaz.com/media/wysiwyg/Mahay-Winter-Main-Banner_1_1.jpg">
+  <img src="https://www.sanasafinaz.com/media/wysiwyg/Muzlin_Winter_main_1--20.jpg" alt="Muzlin Winter">
+</picture>
+</a></li>---></ul>
+</div>
+</div>
+</div>
+</div>
+<p>&nbsp;</p>
+
+<script type="text/delayscript">
+    require([
+        'jquery',
+        'slick'
+    ], function ($) {
+    $(document).ready(function() {
+        $('.slider-main .slides').slick({
+            infinite: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+            loop: true,
+            autoplay:true,
+            autoplaySpeed:3000,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                        settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: false,
+                        infinite: true,
+                        loop: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        infinite: true,
+                        loop: true
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        infinite: true,
+                        loop: true,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+});
+</script>
+
+<style>
+.cms-index-index .home_categories_3col .category_main:hover .cat_image img {
+    transform: scale(1.02);
+}
+
+.cms-index-index .home_categories_3col a.linkdef {
+    display: none;
+}
+
+.cms-index-index .home_categories_3col.has-2-cols-layout .cat_desc {
+    visibility: hidden;
+}
+
+.category-2-cols .cat_image img {
+    width: 100%;
+    height: auto;
+}
+
+.home_categories_3col .category-2-cols {
+    width: calc(100%/2 - 8px);
+    max-width: calc(100%/2 - 8px) !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 30px;
+}
+.has-2-cols-layout .home_categories_3col_wrap {
+  clear: both;
+}
+.store_locator_home {
+    padding: 0 0 !important;
+    margin-bottom: 0 !important;
+}
+.category-2-cols.category_main:hover .linkdef {
+    background: transparent;
+    color: #000 !important;
+    transition: inherit;
+}
+.category-2-cols  .linkdef {
+    margin-top: 0 !important;
+}
+.category-2-cols.category_main .linkdef {
+    transition: .2s ease-in;
+}
+.category-2-cols.category_main .linkdef:hover{
+    background: #000;
+    color: #fff !important;
+    transition: .2s ease-in;
+}
+.category-2-cols ,.cat_desc h3{
+   margin-bottom: 5px;
+}
+
+@media screen and ( max-width: 767px ){
+
+    .home_categories_3col .category-2-cols {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 0;
+    }
+    .home_categories_3col.has-2-cols-layout {
+        padding: 0 0;
+        margin-top: 0px;
+    }
+  .home_categories_3col .category-2-cols .cat_desc h3{
+      margin-bottom: 0;
+  }
+
+.cms-index-index .block.newsletter {padding-top: 0 !important;}
+.cms-index-index .footer-top {
+    padding-top: 0;
+}
+.cms-index-index .page-main .columns {
+    padding-bottom: 0 !important;
+}
+.cms-index-index .column.main {
+    padding-bottom: 0 !important;
+}
+.cms-index-index .btn_store {
+    margin-top: 20px !important;
+}
+.store_locator_home {
+    padding: 10px 0 0 0 !important;
+}
+
+}
+
+@media screen and (min-width: 1024px){
+
+.home_categories_3col .category-2-cols {
+    margin-bottom: 10px;
+}
+.home_categories_3col {
+        padding: 30px 60px !important;  
+}
+.cat_desc {
+    padding: 15px 0;
+}
+
+}
+
+</style>
+<div class="home_categories_3col">
+<div class="home_categories_3col_wrap">
+<div class="category_main column_one">
+
+
+<div class="cat_desc">
+<h3>Nura'22 Vol II</h3>
+<p>Nura festive unstitched collection brings seven sumptuous designs with exceptional craftsmanship and precious embellishments on luxurious fabrics.</p>
+<h3><a class="linkdef" href="unstitched-fabric/nura-22-vol-2.html">Shop Now</a></h3>
+</div>
+<div class="cat_image"><a href="unstitched-fabric/nura-22-vol-2.html"> <img src="https://www.sanasafinaz.com/media/wysiwyg/G222-Colum-banner_1.jpg" alt="Nura'22" width="640" height="800" /> </a></div>
+</div>
+
+
+<div class="category_main column_two">
+<div class="cat_image"><a href="footwear.html"> <img src="https://www.sanasafinaz.com/media/wysiwyg/Footwear-22-September-Colum-banner.jpg" alt="Footwear" width="640" height="800" /> </a></div>
+<div class="cat_desc">
+<h3>Footwear</h3>
+<p>Smart, stylish, and trendy, you name it, we have it. This new collection is for all the wonderful women who want to look effortlessly gorgeous every day!</p>
+<a class="linkdef" href="footwear.html">Shop Now</a></div>
+</div>
+
+
+
+
+<div class="category_main column_three">
+<div class="cat_desc">
+<h3>Ready to Wear</h3>
+<p>A symphonic mix of print and embroidery, combining geometrics with botanicals in a harmonious clash of color.</p>
+<a class="linkdef" href="ready-to-wear.html">Shop Now</a></div>
+<div class="cat_image"><a href="ready-to-wear.html"> <img src="https://www.sanasafinaz.com/media/wysiwyg/EID-RTW-Column-Banner.jpg" width="640" height="800" /> </a></div>
+</div>
+</div>
+</div>
+<div class="home_categories_3col has-2-cols-layout">
+<div class="home_categories_3col_wrap">
+<div class="category_main column_two category-2-cols">
+<div class="cat_image"><a href="https://www.sanasafinaz.com/pk/couture/"> <picture> <source srcset="https://www.sanasafinaz.com/media/wysiwyg/optimized/640-X-800-Mobile-Column.webp" media="(max-width:767px)" /> <img src="https://www.sanasafinaz.com/media/wysiwyg/optimized/900-X-825--Couture-Desktop_banner.webp" width="569" height="557" /> </picture> </a></div>
+<div class="cat_desc">
+<h3>Couture</h3>
+<a class="linkdef" href="https://www.sanasafinaz.com/pk/couture/">Shop Now</a></div>
+</div>
+<div class="category_main column_two category-2-cols">
+<div class="cat_image"><a href="https://www.sanasafinaz.com/pk/bridal/"> <picture> <source srcset="https://www.sanasafinaz.com/media/wysiwyg/optimized/640-X-800-Bridal-Mobile.webp" media="(max-width:767px)" /> <img src="https://www.sanasafinaz.com/media/wysiwyg/optimized/900-X-825--Bridal-Desktop.webp" width="569" height="557" /> </picture> </a></div>
+<div class="cat_desc">
+<h3>Bridal</h3>
+<a class="linkdef" href="https://www.sanasafinaz.com/pk/bridal/">Shop Now</a></div>
+</div>
+</div>
+</div><style>
+.image_store360, .button-store-locator {
+    display: none;
+}
+.tm_instagram_cms {
+    display: none;
+}
+.cms-index-index.page-layout-1column .column.main {
+    padding-bottom: 0 !important;
+}
+.cms-index-index .page-main .columns {
+    padding-bottom: 0 !important;
+}
+
+</style>
+<div class="store_locator_home">
+	<a href="https://www.sanasafinaz.com/pk/stores/">
+		<div class="store_locator_wrap">
+			<div class="title">
+				<h2>Find a Sana Safinaz Store Near You</h2>
+			</div>
+		</div>
+	</a>
+	<div class="btn_store button-store-locator">
+		<a class="btnlocator" href="https://www.sanasafinaz.com/stores">Store Locator</a>
+	</div>
+</div><style xml="space"><!--
+ .instagram_widget-gallery li { position: relative; width: 100%; margin: 0; float: left; } .instagram_widget-gallery li:not(:hover) a { filter: grayscale(100%); -webkit-filter: grayscale(100%); } .instagram_widget-gallery-link { position: absolute; left: 0; right: 0; top: 0; bottom: 0; background-size: cover; background-repeat: no-repeat; transition: .2s all ease-in; } .instagram_widget-gallery img { width: 100%; } .insta-handle { margin-bottom: 30px !important; }
+ 	.instagram_widget-gallery .owl-controls .owl-nav .owl-prev:before, .instagram_widget-gallery .owl-controls .owl-nav .owl-next:before {content: none;}
+ @media screen and (max-width: 767px) {.instagram_widget-gallery li:not(:hover) a {filter: none !important;}}
+--></style>
+<div class="tm_instagram_cms">
+<div class="container-width"><br />
+<p class="insta-handle">#SANASAFINAZOFFICIAL INSTAGRAM</p>
+</div>
+<div> </div>
+</div><main id="maincontent" class="page-main"> <a id="contentarea" tabindex="-1"></a><div class="columns"><div class="column main"><div class="page messages"> <div data-placeholder="messages"></div> <div data-bind="scope: 'messages'"><!-- ko if: cookieMessages && cookieMessages.length > 0 --><div aria-atomic="true" role="alert" data-bind="foreach: { data: cookieMessages, as: 'message' }" class="messages"><div data-bind="attr: { class: 'message-' + message.type + ' ' + message.type + ' message', 'data-ui-id': 'message-' + message.type }"><div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div></div></div><!-- /ko --><!-- ko if: messages().messages && messages().messages.length > 0 --><div aria-atomic="true" role="alert" class="messages" data-bind="foreach: { data: messages().messages, as: 'message' }"><div data-bind="attr: { class: 'message-' + message.type + ' ' + message.type + ' message', 'data-ui-id': 'message-' + message.type }"><div data-bind="html: $parent.prepareMessageForHtml(message.text)"></div></div></div><!-- /ko --></div><script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+                "components": {
+                        "messages": {
+                            "component": "Magento_Theme/js/view/messages"
+                        }
+                    }
+                }
+            }
+    }</script></div><input name="form_key" type="hidden" value="9Xq2ObckdEih1YGo" /> <div id="authenticationPopup" data-bind="scope:'authenticationPopup', style: {display: 'none'}"> <script>window.authenticationPopup = {"autocomplete":"off","customerRegisterUrl":"https:\/\/www.sanasafinaz.com\/pk\/customer\/account\/create\/","customerForgotPasswordUrl":"https:\/\/www.sanasafinaz.com\/pk\/customer\/account\/forgotpassword\/","baseUrl":"https:\/\/www.sanasafinaz.com\/pk\/"}</script> <!-- ko template: getTemplate() --><!-- /ko --><script type="text/x-magento-init">
+        {
+            "#authenticationPopup": {
+                "Magento_Ui/js/core/app": {"components":{"authenticationPopup":{"component":"Magento_Customer\/js\/view\/authentication-popup","children":{"messages":{"component":"Magento_Ui\/js\/view\/messages","displayArea":"messages"},"captcha":{"component":"Magento_Captcha\/js\/view\/checkout\/loginCaptcha","displayArea":"additional-login-form-fields","formId":"user_login","configSource":"checkout"},"amazon-button":{"component":"Amazon_Login\/js\/view\/login-button-wrapper","sortOrder":"0","displayArea":"additional-login-form-fields","config":{"tooltip":"Securely login to our website using your existing Amazon details.","componentDisabled":true}},"social-buttons":{"component":"Mageplaza_SocialLogin\/js\/view\/social-buttons","displayArea":"before"}}}}}            },
+            "*": {
+                "Magento_Ui/js/block-loader": "https\u003A\u002F\u002Fwww.sanasafinaz.com\u002Fstatic\u002Fversion1662924565\u002Ffrontend\u002FRLTSquare\u002FSanaSafinaz\u002Fen_US\u002Fimages\u002Floader\u002D1.gif"
+            }
+        }</script></div> <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/section-config": {
+                "sections": {"stores\/store\/switch":["*"],"stores\/store\/switchrequest":["*"],"directory\/currency\/switch":["*"],"*":["messages"],"customer\/account\/logout":["*","recently_viewed_product","recently_compared_product","persistent"],"customer\/account\/loginpost":["*"],"customer\/account\/createpost":["*"],"customer\/account\/editpost":["*"],"customer\/ajax\/login":["checkout-data","cart","captcha"],"catalog\/product_compare\/add":["compare-products"],"catalog\/product_compare\/remove":["compare-products"],"catalog\/product_compare\/clear":["compare-products"],"sales\/guest\/reorder":["cart"],"sales\/order\/reorder":["cart"],"checkout\/cart\/add":["cart","directory-data","bss-fbpixel-atc"],"checkout\/cart\/delete":["cart"],"checkout\/cart\/updatepost":["cart"],"checkout\/cart\/updateitemoptions":["cart"],"checkout\/cart\/couponpost":["cart"],"checkout\/cart\/estimatepost":["cart"],"checkout\/cart\/estimateupdatepost":["cart"],"checkout\/onepage\/saveorder":["cart","checkout-data","last-ordered-items"],"checkout\/sidebar\/removeitem":["cart"],"checkout\/sidebar\/updateitemqty":["cart"],"rest\/*\/v1\/carts\/*\/payment-information":["cart","last-ordered-items","instant-purchase"],"rest\/*\/v1\/guest-carts\/*\/payment-information":["cart"],"rest\/*\/v1\/guest-carts\/*\/selected-payment-method":["cart","checkout-data"],"rest\/*\/v1\/carts\/*\/selected-payment-method":["cart","checkout-data","instant-purchase"],"wishlist\/index\/add":["wishlist"],"wishlist\/index\/remove":["wishlist"],"wishlist\/index\/updateitemoptions":["wishlist"],"wishlist\/index\/update":["wishlist"],"wishlist\/index\/cart":["wishlist","cart"],"wishlist\/index\/fromcart":["wishlist","cart"],"wishlist\/index\/allcart":["wishlist","cart"],"wishlist\/shared\/allcart":["wishlist","cart"],"wishlist\/shared\/cart":["cart"],"giftregistry\/index\/cart":["cart"],"giftregistry\/view\/addtocart":["cart"],"customer_order\/cart\/updatefaileditemoptions":["cart"],"checkout\/cart\/updatefaileditemoptions":["cart"],"customer_order\/cart\/advancedadd":["cart"],"checkout\/cart\/advancedadd":["cart"],"checkout\/cart\/removeallfailed":["cart"],"checkout\/cart\/removefailed":["cart"],"customer_order\/cart\/addfaileditems":["cart"],"checkout\/cart\/addfaileditems":["cart"],"customer_order\/sku\/uploadfile":["cart"],"customer\/address\/*":["instant-purchase"],"customer\/account\/*":["instant-purchase"],"vault\/cards\/deleteaction":["instant-purchase"],"multishipping\/checkout\/overviewpost":["cart"],"wishlist\/index\/copyitem":["wishlist"],"wishlist\/index\/copyitems":["wishlist"],"wishlist\/index\/deletewishlist":["wishlist","multiplewishlist"],"wishlist\/index\/createwishlist":["multiplewishlist"],"wishlist\/index\/editwishlist":["multiplewishlist"],"wishlist\/index\/moveitem":["wishlist"],"wishlist\/index\/moveitems":["wishlist"],"wishlist\/search\/addtocart":["cart","wishlist"],"paypal\/express\/placeorder":["cart","checkout-data"],"paypal\/payflowexpress\/placeorder":["cart","checkout-data"],"paypal\/express\/onauthorization":["cart","checkout-data"],"persistent\/index\/unsetcookie":["persistent"],"review\/product\/post":["review"],"newsletter\/subscriber\/new":["bss-fbpixel-subscribe"],"sociallogin\/popup\/create":["checkout-data","cart"]},
+                "clientSideSections": ["checkout-data","cart-data","chatData"],
+                "baseUrls": ["https:\/\/www.sanasafinaz.com\/pk\/"],
+                "sectionNames": ["messages","customer","compare-products","last-ordered-items","cart","directory-data","captcha","wishlist","instant-purchase","loggedAsCustomer","multiplewishlist","persistent","review","bss-fbpixel-atc","bss-fbpixel-subscribe","chatData","recently_viewed_product","recently_compared_product","product_data_storage","paypal-billing-agreement"]            }
+        }
+    }</script> <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/customer-data": {
+                "sectionLoadUrl": "https\u003A\u002F\u002Fwww.sanasafinaz.com\u002Fpk\u002Fcustomer\u002Fsection\u002Fload\u002F",
+                "expirableSectionLifetime": 60,
+                "expirableSectionNames": ["cart","persistent"],
+                "cookieLifeTime": "18600",
+                "updateSessionUrl": "https\u003A\u002F\u002Fwww.sanasafinaz.com\u002Fpk\u002Fcustomer\u002Faccount\u002FupdateSession\u002F"
+            }
+        }
+    }</script> <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Customer/js/invalidation-processor": {
+                "invalidationRules": {
+                    "website-rule": {
+                        "Magento_Customer/js/invalidation-rules/website-rule": {
+                            "scopeConfig": {
+                                "websiteId": "1"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }</script> <script type="text/x-magento-init">
+    {
+        "body": {
+            "pageCache": {"url":"https:\/\/www.sanasafinaz.com\/pk\/page_cache\/block\/render\/","handles":["default","cms_index_index","cms_page_view","cms_index_index_id_home","hide_website"],"originalRequest":{"route":"cms","controller":"index","action":"index","uri":"\/pk\/"},"versionCookieName":"private_content_version"}        }
+    }</script> <script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Banner/js/model/banner":
+            {"sectionLoadUrl":"https:\/\/www.sanasafinaz.com\/pk\/banner\/ajax\/load\/","cacheTtl":30000}        }
+}</script>  <div data-mage-init='{"feedReport":[]}'></div>  </div></div></main><footer class="page-footer"><div class="footer-wrapper"><div class="footer-inner container-width"><div class="footer-top"> <div class="block newsletter"><h6 class="news-heading">Subscribe For Our Newsletter</h6> <div class="content"><form class="form subscribe" novalidate action="https://www.sanasafinaz.com/pk/newsletter/subscriber/new/" method="post" data-mage-init='{"validation": {"errorClass": "mage-error"}}' id="newsletter-validate-detail"><div class="field newsletter"><label class="label" for="newsletter"><span>Sign Up for Our Newsletter:</span></label> <div class="control"><input name="email" type="email" id="newsletter" placeholder="Enter your email address" data-validate="{required:true, 'validate-email':true}" /></div></div><div class="actions"><button class="action subscribe primary" title="Subscribe" type="submit"><span>Subscribe</span></button></div></form></div></div></div><div class="footer-center"><div id="block_1" class="footer-area">
+<h6>Company</h6>
+<ul>
+<li><a href="https://www.sanasafinaz.com/pk/contact/">Contact Us</a></li>
+<li><a href="https://www.sanasafinaz.com/pk/shipping-information/">Shipping Information</a></li>
+<li><a href="https://www.sanasafinaz.com/pk/return-exchange/">Return &amp; Exchange</a></li>
+<li><a href="https://www.sanasafinaz.com/pk/payment-security/">Payment &amp; Security</a></li>
+<li><a href="https://www.sanasafinaz.com/pk/loyalty-programme/">Loyalty Programme</a></li>
+</ul>
+</div><div id="block_2" class="footer-area">
+<h6>Help</h6>
+<ul>
+<li><a href="https://www.sanasafinaz.com/pk/sales/guest/form/">Track your Order</a></li>
+<li><a href="https://www.sanasafinaz.com/pk/about-us/">About Us</a></li>
+<li><a href="https://www.sanasafinaz.com/pk/stores/">Store Locator</a></li>
+<li><a href="https://www.sanasafinaz.com/pk/terms-conditions/">Terms &amp; Conditions</a></li>
+<li><a href="https://www.sanasafinaz.com/pk/privacy-policy/">Privacy Policy</a></li>
+<li><a href="https://www.sanasafinaz.com/pk/faq-s/">FAQs</a></li>
+</ul>
+</div><div id="block_3" class="footer-area">
+<h6>Size</h6>
+<ul>
+<li><a href="https://www.sanasafinaz.com/pk/size-guide/">Size Guide</a></li>
+<li><a href="https://www.sanasafinaz.com/pk/size-chart/">Size Chart</a></li>
+</ul>
+</div><div id="block_4" class="footer-area">
+<h6>contact us</h6>
+<ul>
+<li class="contact-title">Sanasafinaz</li>
+<li class="phone">UAN PAKISTAN : 021-111-003-005 or 021-36105426</li>
+<li class="phone">UAN INTERNATIONAL : +9221-111-003-005 or +9221-36105426</li>
+<li class="email">Email : <a href="mailto:sales@sanasafinaz.com">sales@sanasafinaz.com</a></li>
+<li class="email">          : <a href="mailto:bridals@sanasafinaz.com">bridals@sanasafinaz.com</a></li>
+</ul>
+<h6>Talk to us!</h6>
+<ul>
+<li class="phone">Text Us @ 9095 (For Residents Of Pakistan Only)</li>
+</ul>
+</div><div id="block_5" class="footer-area">
+<h6>Store Locator</h6>
+<div class="image-store"><img loading="lazy" src="https://www.sanasafinaz.com/media/wysiwyg/optimized/store-locator-thumb.webp" alt="" /></div>
+<a href="https://www.sanasafinaz.com/pk/stores/"> View All </a></div></div><div class="footer-bottom"><div class="footer-bottom-inner container-width"><ul class="footer links"><li class="nav item"><a href="https://www.sanasafinaz.com/pk/privacy-policy-cookie-restriction-mode/">Privacy and Cookie Policy</a></li><li class="nav item"><a href="https://www.sanasafinaz.com/pk/sales/guest/form/">Orders and Returns</a></li><li class="nav item"><a href="https://www.sanasafinaz.com/pk/search/term/popular/">Search Terms</a></li><li class="nav item"><a href="https://www.sanasafinaz.com/pk/contact/">Contact Us</a></li><li class="nav item"><a href="https://www.sanasafinaz.com/pk/catalogsearch/advanced/" data-action="advanced-search">Advanced Search</a></li></ul> <small class="copyright"><span>Powered by sanasafinaz.com</span></small></div><div class="tm_lang_cur_links">   </div></div></div></div><div class="footer content">  </div></footer> <script type="text/x-magento-init">
+        {
+            "*": {
+                "Magento_Ui/js/core/app": {
+                    "components": {
+                        "storage-manager": {
+                            "component": "Magento_Catalog/js/storage-manager",
+                            "appendTo": "",
+                            "storagesConfiguration" : {"recently_viewed_product":{"requestConfig":{"syncUrl":"https:\/\/www.sanasafinaz.com\/pk\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"recently_compared_product":{"requestConfig":{"syncUrl":"https:\/\/www.sanasafinaz.com\/pk\/catalog\/product\/frontend_action_synchronize\/"},"lifetime":"1000","allowToSendRequest":null},"product_data_storage":{"updateRequestConfig":{"url":"https:\/\/www.sanasafinaz.com\/pk\/rest\/pk\/V1\/products-render-info"},"requestConfig":{"syncUrl":"https:\/\/www.sanasafinaz.com\/pk\/catalog\/product\/frontend_action_synchronize\/"},"allowToSendRequest":null}}                        }
+                    }
+                }
+            }
+        }</script> <style>
+#header .content {display:none !important;}
+</style>        <div id="general-wachat"><a href="https://web.whatsapp.com/send?phone=+9221111003005&amp;text=Hi, I need assistance" onclick="gtag('event', 'WhatsApp', {'event_action': 'whatsapp_chat', 'event_category': 'Chat', 'event_label': 'Chat_WhatsApp'});" target="_blank" class="btn-web"><img src="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/RLTSquare_WhatsAppChat/images/button.png" alt="WA button" /></a> <a href="https://wa.me/+9221111003005?text=Hi, I need assistance" onclick="gtag('event', 'WhatsApp', {'event_action': 'whatsapp_chat', 'event_category': 'Chat', 'event_label': 'Chat_WhatsApp'});" target="_blank" class="btn-mobile"><img src="https://www.sanasafinaz.com/static/version1662924565/frontend/RLTSquare/SanaSafinaz/en_US/RLTSquare_WhatsAppChat/images/button.png" alt="WA button" /></a></div><style type="text/css"> @media(max-width: 767px) { #general-wachat .btn-web{ display: none; } } @media(min-width: 768px) { #general-wachat .btn-mobile{ display: none; } } #general-wachat a { position: fixed; z-index: 9999; float: left !important; bottom: 3%; cursor: pointer; min-width: 50px; max-width: 150px; color: #fff; text-align: center; padding: 10px; margin: 0 auto 0 auto; background: #20b038; transition: All .5s ease; left: 20px; border-radius: 50px; } #general-wachat a img{ width: 50px; }</style></div><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"432bb4096e","applicationID":"37809609","transactionName":"NgYGMUVWCxdTV0MPXw9MJQZDXgoKHVdaFR8IDQAATxgMClZRTw==","queueTime":0,"applicationTime":466,"atts":"GkEFRw1MGBk=","errorBeacon":"bam.nr-data.net","agent":""}</script></body></html>

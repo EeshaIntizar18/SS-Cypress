@@ -1,22 +1,15 @@
-/// <reference types="cypress" />
-class Hbl{
-    hbl()
-    {
-        cy.wait(2000)
-        const s1= cy.get('#hbl_pay')
-        s1.click({force:true})
-        cy.wait(2000)
-      
-       return this
+class Hbl {
+    hbl() {
+        const HBL_PAY_BUTTON = '#hbl_pay';
+        cy.get(HBL_PAY_BUTTON).click({ force: true });
+        return this;
     }
-    placeorder()
-    {
-        cy.wait(2000)
-        const s1= cy.contains('Place Order')
-        s1.click({force:true})
-        cy.wait(2000)
-      
-       return this  
+
+    placeorder() {
+        const PLACE_ORDER_BUTTON = 'Place Order';
+        cy.contains(PLACE_ORDER_BUTTON).click({ force: true });
+        return this;
     }
 }
-export default Hbl
+
+export default Hbl;

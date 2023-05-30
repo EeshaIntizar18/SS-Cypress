@@ -1,40 +1,29 @@
 /// <reference types="cypress" />
-export default class Pdp{
-    pdp()
-    {
-  //clcik on product
-  cy.contains('SS21GWT107').click({ multiple: true ,force: true })
-  cy.wait(6000)
-  return this
-  
-    }  
-  
-    sizedrop()
-    {
-    //click on size 
-  cy.wait(5000)
- cy.get('[data-option-id="901"]').click({ multiple: true ,force: true })
- return this
+export default class Pdp {
 
-    }
-  
-  
-    quantity(){
-  cy.wait(5000)
-   cy.scrollTo('top')
-      cy.wait(4000)
-      //clcik on size
-    cy.get('*[class^="qty-increase"]',{ timeout: 3000 }).click({ multiple: true ,force: true })
+  pdp() {
+    //clcik on product
+    cy.get('#maincontent > div > div.column.main > div.search.results > div.products.wrapper.grid.products-grid > ol > li > div > a > span > span > img').click({force:true})
+    cy.wait(4000)
     return this
   }
-  
-  addtocart(){
-  //click on add to cart button
- 
-  cy.get('#product-addtocart-button',{ timeout: 3000 }).click({ multiple: true ,force: true })
-  return this
-  
+  selectSize() {
+    cy.scrollTo('500,0')
+    //click on size
+    cy.get(`[data-option-id="43"]`).contains('S').click()
+    return this
   }
- 
+
+  increaseQuantity() {
+    
+    cy.get('*[class^="qty-increase"').click()
+    return this
   }
-  
+  addToCart() {
+    //click on add to cart button
+    cy.get('#product-addtocart-button').click()
+    cy.wait(1000)
+    cy.get('.minicart-wrapper').should('be.visible')
+    return this
+  }
+}

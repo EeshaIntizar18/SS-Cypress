@@ -2,7 +2,6 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false;
   });
   
-  
   import Ad from '../../support/Add'
   import Search from '../../support/Search.js'
   import Filters from '../../support/Filters.js'
@@ -10,8 +9,6 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   import Viewbag from '../../support/Viewbag.js'
   import GuestShippingAddress from '../../support/GuestShippingAddress.js'
   import Hbl from '../../support/Hbl.js'
-  import { idText } from 'typescript';
-  
   
   describe('Guest user', () => {
     beforeEach(() => {
@@ -20,8 +17,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
   
   it('Ad',() =>
   {
-  
-    cy.visit('https://staging.sanasafinaz.com/uk')
+    cy.visit('https://staging.sanasafinaz.com/pk')
   
     //////////////////////////Satge///////////////
     cy.url().then(($el) => {
@@ -44,16 +40,14 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     p.quantity()
     p.addtocart()
     
-  
     const v=new Viewbag()
     v.viewbag1()
     v.quantity()
     v.clickcheckout()
   
-  
     const g=new GuestShippingAddress()
-   g.email()
-   g.firstname()
+    g.email()
+    g.firstname()
    g.lastname()
    g.address()
    g.country()
@@ -84,28 +78,24 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     p.quantity()
     p.addtocart()
     
-  
     const v=new Viewbag()
     v.viewbag1()
     v.quantity()
     v.clickcheckout()
   
-  
-  const g=new GuestShippingAddress()
-  cy.wait(5000)
-   g.email()
-   g.firstname()
-   g.lastname()
-   g.address()
-   g.country()
-   g.region()
-   g.city()
-   g.city1()
-   g.postcode()
-   g.phone()
-   g.shipping()
-  
-    
+    const g=new GuestShippingAddress()
+    cy.wait(5000)
+    g.email()
+    g.firstname()
+    g.lastname()
+    g.address()
+    g.country()
+    g.region()
+    g.city()
+    g.city1()
+    g.postcode()
+    g.phone()
+    g.shipping()
     }
   })
   })
